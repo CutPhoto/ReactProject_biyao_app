@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import './base.css';
 import registerServiceWorker from './registerServiceWorker';
+
 //redux Provider是把store用在所有组件中
 import { Provider } from 'react-redux';
 //createStore是创建仓库的方法
 import { createStore } from 'redux';
-//引入路由
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
+//引入路由
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+import Home from './pages/home';
 
 
 
@@ -32,12 +35,12 @@ const store = createStore((state = {
 });
 
 ReactDOM.render(
-	<router>
+	<Router>
 		<Provider store={store}>
-			<div id="biyso">
-				1
+			<div id="biyao">
+				<Home/>
 			</div>
 		</Provider>
-	　</router>,
+	</Router>,
 	document.getElementById('root'));
 registerServiceWorker();
