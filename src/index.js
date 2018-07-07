@@ -10,7 +10,7 @@ import { createStore } from 'redux';
 //引入路由
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
-
+import Classify from './pages/classify/classify.js';
 
 
 const store = createStore((state = {
@@ -31,13 +31,25 @@ const store = createStore((state = {
 	}
 });
 
+//ReactDOM.render(
+//	<Router>
+//		<Provider store={store}>
+//			<div id="biyso">
+//			</div>
+//		</Provider>
+//	　</Router>,
+//	document.getElementById('root'));
+//registerServiceWorker();
+//
+
+
 ReactDOM.render(
-	<router>
+	<Router>
 		<Provider store={store}>
-			<div id="biyso">
-				1
+			<div>
+				<Route exact path="/classify" component={Classify}/>
 			</div>
 		</Provider>
-	　</router>,
+	</Router>,
 	document.getElementById('root'));
 registerServiceWorker();

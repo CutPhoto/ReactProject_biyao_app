@@ -1,0 +1,39 @@
+.cateList{
+	float: left;
+	width: 79%;
+}
+.cateList-first{
+	
+}
+.cateList-first .top-banner{
+	display: block;
+	height: 266px;
+	width: 100%;
+	text-align: center;
+	padding-top: 30px;
+}
+.cateList-first .top-banner img{
+	width: 529px;
+	height: 240px;
+}
+.list-hd{
+	font-size: 30px;
+	text-align: center;
+	line-height: 60px;
+}
+.clear{
+	overflow: hidden;
+	padding: 30px;
+}
+.clear .cateList-third{
+	float: left;
+	width: 33.33%;
+	text-align: center;
+	
+}
+.clear .cateList-third img{
+	width: 100%;
+}
+.clear .cateList-third dd{
+	font-size: 12px;
+}

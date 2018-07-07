@@ -1,0 +1,14 @@
+.category{
+ width: 20%;
+ float: left;	
+ border-right: 1px solid #ccc;
+}
+.category-ul{
+
+}
+.escp{
+	height: 88px;
+	font-size: 30px;
+	text-align: center;
+	line-height: 88px;
+}
