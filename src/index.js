@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+//页面放这里
 import App from './App';
+import ShoppingCar from './pages/ShoppingCar'
+import Login from './pages/Login'
+//引入阿里ant样式
+// import 'antd-mobile/dist/antd-mobile.css';
 import registerServiceWorker from './registerServiceWorker';
 //redux Provider是把store用在所有组件中
 import { Provider } from 'react-redux';
@@ -31,13 +36,19 @@ const store = createStore((state = {
 	}
 });
 
+
 ReactDOM.render(
-	<router>
-		<Provider store={store}>
-			<div id="biyso">
-				1
-			</div>
+	<Router>
+		<Provider store={ store } >
+			<div>	
+				<Route exact path="/" component={App}/>
+				<Route path="/shoppingcar" component={ShoppingCar}/>
+	      		<Route path="/login" component={Login}/>
+
+	      	</div>
 		</Provider>
-	　</router>,
-	document.getElementById('root'));
+	</Router>
+	,
+	document.getElementById('root')	
+	)
 registerServiceWorker();

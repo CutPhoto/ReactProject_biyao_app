@@ -1,0 +1,42 @@
+.Login{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color:  #f2f2f2;
+	align-content: space-around;
+}
+.logincontent{
+	text-align: center;
+	
+}
+.logincontent input{
+	outline: none;
+	height: 50px;
+	width:90%;
+	border:none;
+	border-bottom: 1px solid #ccc;
+	background-color: #f2f2f2;
+
+}
+.logincontent > p:nth-of-type(1){
+	font-size: 12px;
+	height: 30px;
+	line-height: 50px;
+	text-align: center;
+	color:red;
+}
+.logincontent > p:nth-of-type(2){
+	width: 90%;
+	height: 80px;
+	display: inline-block;
+}
+.logincontent > p:nth-of-type(2) a{
+	color: #7f4395;
+}
+.logincontent > p:nth-of-type(2) a:nth-child(1){
+	float:left;
+}
+.logincontent > p:nth-of-type(2) a:nth-child(2){
+	float:right;
+}
