@@ -7,7 +7,7 @@ class Login extends Component {
 		super(props)
 		this.state = {
 			isShowEditor:false,
-			textcontent:'购物车',
+			textcontent:'登录',
 			chooseStyle:true,
 			isPassword:true,
 			
@@ -47,7 +47,7 @@ class Login extends Component {
 						<p>必要不会以任何理由要求您汇款，谨防诈骗。</p>
 						<LoginBtn chooseStyle={this.state.chooseStyle} btncontent="登录"/>
 						<LoginBtn chooseStyle={!this.state.chooseStyle} btncontent="验证码登录"/>
-						<p style={{marginTop:'40px',fontSize:'16px'}}><a>还没帐号？快速注册</a><a>忘记密码!</a></p>
+						<p style={{marginTop:'40px',fontSize:'16px',height:'40px'}}><a>还没帐号？快速注册</a><a>忘记密码!</a></p>
 					</div>
 					<div className="partnerLogins">
 						<div className="line">

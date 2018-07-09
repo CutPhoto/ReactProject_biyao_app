@@ -19,7 +19,7 @@ class Myregister extends Component{
 				<HeaderLogin isShowEditor={this.state.isShowEditor} textcontent={this.state.textcontent}/>
 				<Fromcontext/>
 				<LoginBtn chooseStyle={this.state.chooseStyle} btncontent="提交"/>
-				<p style={{marginTop:'40px',fontSize:'16px'}}><a>已有帐号！立即登录</a></p>
+				<p style={{marginTop:'40px',fontSize:'16px',height:'40px'}}><a>已有帐号！立即登录</a></p>
 			</div>
 			)
 	}

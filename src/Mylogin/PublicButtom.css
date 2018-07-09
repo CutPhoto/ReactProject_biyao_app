@@ -4,9 +4,10 @@ ul,li{
 	margin: 0;
 }
 .PublicButtom {
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
+	background-color: #fff;
 }
 .PublicButtom>ul{
 	display: flex;
