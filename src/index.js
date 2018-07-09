@@ -5,6 +5,8 @@ import './index.css';
 import App from './App';
 import ShoppingCar from './pages/ShoppingCar'
 import Login from './pages/Login'
+import Myregister from './pages/Myregister'
+import Changepassword from './pages/Changepassword'
 //引入阿里ant样式
 // import 'antd-mobile/dist/antd-mobile.css';
 import registerServiceWorker from './registerServiceWorker';
@@ -44,7 +46,8 @@ ReactDOM.render(
 				<Route exact path="/" component={App}/>
 				<Route path="/shoppingcar" component={ShoppingCar}/>
 	      		<Route path="/login" component={Login}/>
-
+	      		<Route path="/myregister" component={Myregister}/>
+	      		<Route path="/changepassword" component={Changepassword}/>
 	      	</div>
 		</Provider>
 	</Router>

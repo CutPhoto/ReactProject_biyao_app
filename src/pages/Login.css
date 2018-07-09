@@ -40,3 +40,57 @@
 .logincontent > p:nth-of-type(2) a:nth-child(2){
 	float:right;
 }
+.partnerLogins{
+	text-align: center;
+	color: gray;
+}
+.Login .line::before{
+	content: "";
+	display: block;
+	width: 100%;
+	background-color: #ccc;
+	height: 1px;
+	position: absolute;
+	margin-top: 12px;
+
+}
+.Login .line > span{
+	padding: 0 10px;
+	background-color:#f2f2f2;
+	position: relative;
+}
+.qqlogin{
+	margin-top: 40px;
+	display: inline-block;
+	width: 52px;
+	height: 44px;
+	background: url('../img/qq.png') no-repeat;
+}
+.eye{
+	display: block;
+	width: 28px;
+	height: 16px;
+	background: url('../img/eye.png') no-repeat;
+	position: absolute;
+	right: 7%;
+	top:18px;
+}
+.clearvalue{
+	position: absolute;
+	display: none;
+	text-align: center;
+	height: 23px;
+	width: 23px;
+	border-radius: 50%;
+	border:1px solid #ccc;
+	line-height: 20px;
+	color:#ccc;
+}
+.clearvalue0{
+	right: 7%;
+	top:14px;
+}
+.clearvalue1{
+	right: 15%;
+	top:14px;
+}
