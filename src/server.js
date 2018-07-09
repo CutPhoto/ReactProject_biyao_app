@@ -41,7 +41,7 @@ app.use(function(req, res, next) {
 //	}
 //
 //}
-//获取所有商品路由
+//获取所有商品路由(需要传入suid)
 app.get('/getGoodsList', function(req, res) {
 	request.get('http://qxu1142150189.my3w.com/api/getList.php', function(error, response, body) {
 		if(!error && response.statusCode == 200) {
@@ -57,7 +57,7 @@ app.get('/getCartList', function(req, res) {
 		}
 	});
 });
-//获取商品详情路由
+//获取商品详情路由(需要传入suid)
 app.get('/getDetails', function(req, res) {
 	request.post({url:'http://qxu1142150189.my3w.com/api/details.php', form:{suid:req.query.suid}},function(error, response, body) {
 		if(!error && response.statusCode == 200) {
@@ -65,7 +65,7 @@ app.get('/getDetails', function(req, res) {
 		}
 	});
 });
-//获取分类路由
+//获取分类路由(需要传入分类classify)
 app.get('/getClassify', function(req, res) {
 	request.post({url:'http://qxu1142150189.my3w.com/api/getClassify.php', form:req.query},function(error, response, body) {
 		if(!error && response.statusCode == 200) {
@@ -73,7 +73,7 @@ app.get('/getClassify', function(req, res) {
 		}
 	});
 });
-//登陆路由
+//登陆路由(需要传入userPhone,passWord)
 app.post('/login', function(req, res) {
 	request.post({url:'http://qxu1142150189.my3w.com/api/login.php', form:req.body},function(error, response, body) {
 		if(!error && response.statusCode == 200) {
@@ -81,7 +81,7 @@ app.post('/login', function(req, res) {
 		}
 	});
 });
-//注册路由
+//注册路由(需要传入userPhone,passWord)
 app.post('/signin', function(req, res) {
 	request.post({url:'http://qxu1142150189.my3w.com/api/signin.php', form:req.body},function(error, response, body) {
 		if(!error && response.statusCode == 200) {
@@ -89,7 +89,7 @@ app.post('/signin', function(req, res) {
 		}
 	});
 });
-//添加购物车路由
+//添加购物车路由(需要传入suid,num)
 app.get('/addToCart', function(req, res) {
 	request.post({url:'http://qxu1142150189.my3w.com/api/add.php', form:req.body},function(error, response, body) {
 		if(!error && response.statusCode == 200) {
@@ -97,7 +97,7 @@ app.get('/addToCart', function(req, res) {
 		}
 	});
 });
-//删除购物车其中一项
+//删除购物车其中一项(需要传入suid)
 app.get('/removeToCart', function(req, res) {
 	request.post({url:'http://qxu1142150189.my3w.com/api/remove.php', form:req.body},function(error, response, body) {
 		if(!error && response.statusCode == 200) {
@@ -105,7 +105,7 @@ app.get('/removeToCart', function(req, res) {
 		}
 	});
 })
-//减少购物车其中一项的数量
+//减少购物车其中一项的数量(需要传入suid,num)
 app.get('/jianshaoToCart', function(req, res) {
 	request.post({url:'http://qxu1142150189.my3w.com/api/jianshao.php', form:req.body},function(error, response, body) {
 		if(!error && response.statusCode == 200) {
