@@ -19,7 +19,7 @@ import { createStore } from 'redux';
 //引入路由
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
-
+import Classify from './pages/classify/classify.js';
 
 
 const store = createStore((state = {
@@ -45,7 +45,7 @@ ReactDOM.render(
 	<Router>
 		<Provider store={ store } >
 			<div>	
-			
+				<Route exact path="/classify" component={Classify}/>
 				<Route exact path="/home" component={Home}/>
 				<Route path="/shoppingcar" component={ShoppingCar}/>
 	      		<Route path="/login" component={Login}/>
@@ -58,3 +58,6 @@ ReactDOM.render(
 	,
 	document.getElementById('root')	
 	)
+
+registerServiceWorker();
+
