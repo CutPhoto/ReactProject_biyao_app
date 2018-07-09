@@ -1,6 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './base.css';
 //页面放这里
 import App from './App';
 import ShoppingCar from './pages/ShoppingCar'
@@ -8,6 +10,7 @@ import Login from './pages/Login'
 import Myregister from './pages/Myregister'
 import Changepassword from './pages/Changepassword'
 import Myorder from './pages/Myorder'
+import Home from './pages/home';
 //引入阿里ant样式
 // import 'antd-mobile/dist/antd-mobile.css';
 import registerServiceWorker from './registerServiceWorker';
@@ -45,6 +48,7 @@ ReactDOM.render(
 		<Provider store={ store } >
 			<div>	
 				<Route exact path="/" component={App}/>
+				<Route exact path="/home" component={Home}/>
 				<Route path="/shoppingcar" component={ShoppingCar}/>
 	      		<Route path="/login" component={Login}/>
 	      		<Route path="/myregister" component={Myregister}/>
@@ -56,4 +60,3 @@ ReactDOM.render(
 	,
 	document.getElementById('root')	
 	)
-registerServiceWorker();
