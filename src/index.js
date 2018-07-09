@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './base.css';
 //页面放这里
-import App from './App';
 import ShoppingCar from './pages/ShoppingCar'
 import Login from './pages/Login'
 import Myregister from './pages/Myregister'
@@ -47,7 +45,7 @@ ReactDOM.render(
 	<Router>
 		<Provider store={ store } >
 			<div>	
-				<Route exact path="/" component={App}/>
+			
 				<Route exact path="/home" component={Home}/>
 				<Route path="/shoppingcar" component={ShoppingCar}/>
 	      		<Route path="/login" component={Login}/>
