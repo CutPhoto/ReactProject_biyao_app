@@ -41,7 +41,7 @@ app.use(function(req, res, next) {
 //	}
 //
 //}
-//获取所有商品路由(需要传入suid)
+//获取所有商品路由
 app.get('/getGoodsList', function(req, res) {
 	request.get('http://qxu1142150189.my3w.com/api/getList.php', function(error, response, body) {
 		if(!error && response.statusCode == 200) {
