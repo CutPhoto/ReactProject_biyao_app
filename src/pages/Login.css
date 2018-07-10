@@ -1,0 +1,96 @@
+.Login{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color:  #f2f2f2;
+	align-content: space-around;
+}
+.logincontent{
+	text-align: center;
+	
+}
+.logincontent input{
+	outline: none;
+	height: 50px;
+	width:90%;
+	border:none;
+	border-bottom: 1px solid #ccc;
+	background-color: #f2f2f2;
+
+}
+.logincontent > p:nth-of-type(1){
+	font-size: 12px;
+	height: 30px;
+	line-height: 50px;
+	text-align: center;
+	color:red;
+}
+.logincontent > p:nth-of-type(2){
+	width: 90%;
+	height: 80px;
+	display: inline-block;
+}
+.logincontent > p:nth-of-type(2) a{
+	color: #7f4395;
+}
+.logincontent > p:nth-of-type(2) a:nth-child(1){
+	float:left;
+}
+.logincontent > p:nth-of-type(2) a:nth-child(2){
+	float:right;
+}
+.partnerLogins{
+	text-align: center;
+	color: gray;
+}
+.Login .line::before{
+	content: "";
+	display: block;
+	width: 100%;
+	background-color: #ccc;
+	height: 1px;
+	position: absolute;
+	margin-top: 12px;
+
+}
+.Login .line > span{
+	padding: 0 10px;
+	background-color:#f2f2f2;
+	position: relative;
+}
+.qqlogin{
+	margin-top: 40px;
+	display: inline-block;
+	width: 52px;
+	height: 44px;
+	background: url('../img/qq.png') no-repeat;
+}
+.eye{
+	display: block;
+	width: 28px;
+	height: 16px;
+	background: url('../img/eye.png') no-repeat;
+	position: absolute;
+	right: 7%;
+	top:18px;
+}
+.clearvalue{
+	position: absolute;
+	display: none;
+	text-align: center;
+	height: 23px;
+	width: 23px;
+	border-radius: 50%;
+	border:1px solid #ccc;
+	line-height: 20px;
+	color:#ccc;
+}
+.clearvalue0{
+	right: 7%;
+	top:14px;
+}
+.clearvalue1{
+	right: 15%;
+	top:14px;
+}

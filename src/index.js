@@ -2,8 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 //页面放这里
-import App from './App';
-
+import ShoppingCar from './pages/ShoppingCar'
+import Login from './pages/Login'
+import Myregister from './pages/Myregister'
+import Changepassword from './pages/Changepassword'
+import Myorder from './pages/Myorder'
 //引入阿里ant样式
 // import 'antd-mobile/dist/antd-mobile.css';
 import registerServiceWorker from './registerServiceWorker';
@@ -33,11 +36,9 @@ const store = createStore((state = {
 		
 		default:
 			return state
+
 	}
 });
-
-
-
 
 
 ReactDOM.render(
@@ -47,11 +48,16 @@ ReactDOM.render(
 				<Route exact path="/classify" component={Classify}/>
 				<Route exact path="/search" component={Search}/>
 				<Route exact path="/classpage" component={Classpage}/>
+				<Route path="/shoppingcar" component={ShoppingCar}/>
+	      		<Route path="/login" component={Login}/>
+	      		<Route path="/myregister" component={Myregister}/>
+	      		<Route path="/changepassword" component={Changepassword}/>
+	      		<Route path="/Myorder" component={Myorder}/>
 	      	</div>
 		</Provider>
 	</Router>
 	,
 	document.getElementById('root')	
-	)
+)
 registerServiceWorker();
 

@@ -1,0 +1,92 @@
+.Myorder{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #f2f2f2;
+	overflow-y:scroll; 
+}
+.Myorder > div{
+	background-color: #fff;
+}
+.Myorder > div:nth-of-type(1){
+	height: 220px;
+	background-color: #5D3183;
+}
+.Myorder > div:nth-of-type(2){
+	margin: 10px 0;
+}
+.Myorder > div > p{
+	height:60px;	
+	margin: 0 15px;
+	line-height: 60px;
+	border-bottom: 1px solid #ccc;
+}
+.Myorder > div > p > i{
+	float:right;
+}
+.Myorder .iconText{
+	display: flex;
+	height: 100px;
+	padding:0 15px;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+}
+.Myorder .iconText span{
+	flex:1;
+	font-size: 14px;
+}
+.Myorder>div:nth-of-type(4){
+	font-size: 14px;
+	background-color: #ccc;
+	height: 34px;
+	text-align: center;
+	line-height: 34px;
+}
+.Myorder>div:nth-of-type(5){
+	height: 220px;
+	background-color: #333;
+}
+.Myorder .bottomdiv{
+	text-align: center;
+	color:gray;
+}
+.Myorder .bottomdiv>div:nth-of-type(1){
+	text-align: center;
+}
+.Myorder .bottomdiv>div:nth-of-type(1) a{
+	padding: 10px;
+	border:1px solid white;
+	color:white;
+	display:inline-block;
+	margin:20px 10px 10px;
+	font-size: 16px;
+}
+.Myorder .bottomdiv>div:nth-of-type(2){
+	margin-top: 20px;
+	font-size: 14px;
+}
+.Myorder .bottomdiv>div:nth-of-type(2)>a{
+	padding: 0 5px;
+}
+.Myorder .bottomdiv>div:nth-of-type(3){
+	margin-top: 8px;
+	font-size: 14px;
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 737441 */
+  src: url('//at.alicdn.com/t/font_737441_vvpqs86eu6e.eot');
+  src: url('//at.alicdn.com/t/font_737441_vvpqs86eu6e.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_737441_vvpqs86eu6e.woff') format('woff'),
+  url('//at.alicdn.com/t/font_737441_vvpqs86eu6e.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_737441_vvpqs86eu6e.svg#iconfont') format('svg');
+}
+.iconfont1{
+    font-family:"iconfont" !important;
+    font-size:32px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    color:#000;
+    font-weight: normal;
+}

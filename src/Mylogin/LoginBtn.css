@@ -1,0 +1,24 @@
+.LoginBtn{
+	width: 100%;
+	text-align: center;
+}
+.LoginBtn button{
+	margin-top: 12px;
+	height: 50px;
+	width: 90%;
+	text-align: center;
+	border-radius:50px;
+	color:white;
+	font-size: 16px;
+	border:1px solid #7f4395;
+}
+
+.LoginBtn .styleone{
+	box-shadow: 0 5px 8px rgba(127,67,149,.4);
+	background-color: #7f4395;
+	color:white;
+}
+.LoginBtn .styletwo{
+	background-color: none;
+	color:#7f4395;
+}
