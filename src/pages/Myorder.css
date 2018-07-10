@@ -47,6 +47,32 @@
 	height: 220px;
 	background-color: #333;
 }
+.Myorder .bottomdiv{
+	text-align: center;
+	color:gray;
+}
+.Myorder .bottomdiv>div:nth-of-type(1){
+	text-align: center;
+}
+.Myorder .bottomdiv>div:nth-of-type(1) a{
+	padding: 10px;
+	border:1px solid white;
+	color:white;
+	display:inline-block;
+	margin:20px 10px 10px;
+	font-size: 16px;
+}
+.Myorder .bottomdiv>div:nth-of-type(2){
+	margin-top: 20px;
+	font-size: 14px;
+}
+.Myorder .bottomdiv>div:nth-of-type(2)>a{
+	padding: 0 5px;
+}
+.Myorder .bottomdiv>div:nth-of-type(3){
+	margin-top: 8px;
+	font-size: 14px;
+}
 @font-face {
   font-family: 'iconfont';  /* project id 737441 */
   src: url('//at.alicdn.com/t/font_737441_vvpqs86eu6e.eot');

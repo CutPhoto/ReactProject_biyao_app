@@ -44,7 +44,14 @@ class Myorder extends Component{
 						<p>客服新消息<i>&gt;</i></p>
 					</div>
 					<div>关注“必要”微信服务号获取订单最新状态！</div>
-					<div style={{marginBottom:'60px'}}></div>
+					<div style={{marginBottom:'60px'}} className="bottomdiv">
+						<div>
+							<a>下载App</a>
+							<a>关于必要</a>
+						</div>
+						<div><a>by_UDlUPnCm</a><a>|</a><a>退出</a></div>
+						<div>Copyright © 2018, BIYAO.COM</div>
+					</div>
 					<PublicButtom />
 				</div>	
 			)
