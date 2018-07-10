@@ -1,0 +1,27 @@
+.category{
+ width: 25%;
+ float: left;	
+ border-right: 1px solid #ccc;
+ display: flex;
+ flex-direction: column;
+ height: 600px;
+}
+.category-ul{
+	flex: 1;
+	overflow-x: hidden;
+}
+.escp{
+	height: 44px;
+	font-size: 16px;
+	text-align: center;
+	line-height: 44px;
+	
+}
+.escps{
+	height: 44px;
+	font-size: 16px;
+	text-align: center;
+	line-height: 44px;
+	color: #7f4395;
+	border-left: 3px solid #7f4395;
+}
