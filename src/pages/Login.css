@@ -5,6 +5,7 @@
 	flex-direction: column;
 	background-color:  #f2f2f2;
 	align-content: space-around;
+	touch-action: none;
 }
 .logincontent{
 	text-align: center;
