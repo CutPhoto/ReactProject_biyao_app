@@ -1,0 +1,13 @@
+.article_header{
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #999;
+	padding: 0 10px;
+}
+.article_header_c{
+	width: 200px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	line-height: 40px;
+}

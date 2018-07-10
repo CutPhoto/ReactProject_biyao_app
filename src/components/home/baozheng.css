@@ -1,0 +1,22 @@
+.baozheng_box{
+	padding:0 10px;
+	border-bottom: 1px solid #F8F8F8;
+	background-color: #fff;
+}
+.baozheng_box ul{
+	display: flex;
+	justify-content: space-between;
+	font-size: 12px
+}
+.baozheng_box ul li{
+	height: 30px;
+	line-height: 30px;
+	color: #7f4395;
+}
+.baozheng_box ul li i{
+	display: inline-block;
+	width: 20px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}

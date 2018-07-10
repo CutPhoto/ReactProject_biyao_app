@@ -8,10 +8,12 @@ import Login from './pages/Login'
 import Myregister from './pages/Myregister'
 import Changepassword from './pages/Changepassword'
 import Myorder from './pages/Myorder'
-import Home from './pages/home';
 //引入阿里ant样式
 // import 'antd-mobile/dist/antd-mobile.css';
 import registerServiceWorker from './registerServiceWorker';
+import 'weui';
+import './static/iconfont/iconfont.css';
+
 //redux Provider是把store用在所有组件中
 import { Provider } from 'react-redux';
 //createStore是创建仓库的方法
@@ -20,6 +22,16 @@ import { createStore } from 'redux';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 import Classify from './pages/classify/classify.js';
+
+//引入首页
+import Home from './pages/home';
+//返回顶部
+import Backtop from './components/backTop';
+
+//引入搜索结果页
+import SearchResult from './pages/searchResult';
+//引入必要说article
+import SbysArticle from './pages/bysArticle';
 
 
 const store = createStore((state = {
@@ -40,18 +52,20 @@ const store = createStore((state = {
 	}
 });
 
-
 ReactDOM.render(
 	<Router>
 		<Provider store={ store } >
 			<div>	
 				<Route exact path="/classify" component={Classify}/>
 				<Route exact path="/home" component={Home}/>
+				<Route exact path='/search/searchResult' component={SearchResult}/>
+				<Route exact path='/article' component={SbysArticle}/>
 				<Route path="/shoppingcar" component={ShoppingCar}/>
 	      		<Route path="/login" component={Login}/>
 	      		<Route path="/myregister" component={Myregister}/>
 	      		<Route path="/changepassword" component={Changepassword}/>
 	      		<Route path="/Myorder" component={Myorder}/>
+	      		<Backtop/>
 	      	</div>
 		</Provider>
 	</Router>
@@ -60,4 +74,3 @@ ReactDOM.render(
 	)
 
 registerServiceWorker();
-
