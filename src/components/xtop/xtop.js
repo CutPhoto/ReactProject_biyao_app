@@ -17,7 +17,7 @@ class Xtop extends Component {
 		return(
 			
       	<div className="header-fix classify-header-fix">
-			<a href="/search/searchResult" className="header-search">
+			<a href="/search" className="header-search">
 				<Icon type="search" className="header-i"/>
 				<span className="header-s">请输入您想要的商品</span>
 			</a>

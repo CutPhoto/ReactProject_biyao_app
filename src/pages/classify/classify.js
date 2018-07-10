@@ -17,7 +17,8 @@ class Classify extends Component {
 	//template
 	render() {
 		return(
-			<div>
+
+			<div className="classify">
 				<Xtop />
 				<Xcategory />
 				<XcateList />

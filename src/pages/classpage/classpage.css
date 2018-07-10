@@ -1,0 +1,88 @@
+.classPage{
+	width: 100%;
+	top: 100%;
+	font-size: 16px;
+}
+.page_top{
+	height: 40px;
+	
+}
+.page_top>p{
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 40px;
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 740747 */
+  src: url('//at.alicdn.com/t/font_740747_qdbhh3nuyt.eot');
+  src: url('//at.alicdn.com/t/font_740747_qdbhh3nuyt.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_740747_qdbhh3nuyt.woff') format('woff'),
+  url('//at.alicdn.com/t/font_740747_qdbhh3nuyt.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_740747_qdbhh3nuyt.svg#iconfont') format('svg');
+}
+.iconfont123{
+    font-family:"iconfont" !important;
+    font-size:24px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+.page_top>a{
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 6px;
+	left: 10px;
+	color: #333333;
+}
+.page_box p{
+	height: 40px;
+	width: 90%;
+	padding: 0 5%;
+	text-align: center;
+	line-height: 40px;
+	background-color:#CCCCCC;
+}
+.page_box>ul{
+	display: flex;
+	flex-direction: column;
+	height: 630px;
+}
+.page_box>ul>li{
+	flex:1;
+	overflow-x: hidden;
+}
+.page_main{
+	background-color: #CCCCCC;
+	overflow: hidden;
+}
+.page_main>li{
+	float: left;
+	width: 49%;
+	margin: 1px;
+}
+.page_main>li>a{
+	display: block;
+	width: 100%;
+	height: 200px;
+	background-color: #FFFFFF;
+}
+.page_main>li>a>img{
+	width: 100%;
+	height: 140px;
+}
+.page_main>li>a>dl>dt{
+	font-size: 14px;
+	text-align: center;
+	color: #222222;
+	height: 26px;
+	line-height: 26px;
+}
+.page_main>li>a>dl>dd{
+	font-size: 14px;
+	text-align: center;
+	color: red;
+	height: 26px;
+	line-height: 26px;
+}

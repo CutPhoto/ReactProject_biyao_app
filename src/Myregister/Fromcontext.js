@@ -27,19 +27,19 @@ class Fromcontext extends Component{
 		return(
 				<div className="fromcontext" style={{marginTop:'60px'}}>
 					<div style={{position:'relative'}}>
-						<input placeholder="请输入手机号" type="text" onInput={this.showvaule}/>
+						<input placeholder="请输入手机号" type="text" onInput={this.showvaule} ref='telinput' id="telinput"/>
 						<span className="clearvalue0 clearvalue" onClick={this.clearvalue} >x</span>
 					</div>
 					<div style={{position:'relative'}}>
-						<input placeholder="请输入图中验证码" type ="text" onInput={this.showvaule}/>
+						<input placeholder="请输入图中验证码" type ="text" onInput={this.showvaule} ref='codeinput' id="codeinput"/>
 						<span className="clearvalue0 clearvalue" onClick={this.clearvalue} >x</span>
 					</div>
 					<div style={{position:'relative'}}>
-						<input max="7" placeholder="请输入短信验证密码" type = "text" onInput={this.showvaule}/>
+						<input placeholder="请输入短信验证密码" type = "text" onInput={this.showvaule} ref= 'noteinput' id="noteinput"/>
 						<span className="clearvalue0 clearvalue" onClick={this.clearvalue} >x</span>
 					</div>
 					<div style={{position:'relative'}}>		
-						<input placeholder="请输入6-32位登录密码" type = {this.state.isPassword? 'password':'text'} onInput={this.showvaule}/>
+						<input placeholder="请输入6-32位登录密码" type = {this.state.isPassword? 'password':'text'} onInput={this.showvaule} ref='pasinput' id="pasinput"/>
 						<span className="clearvalue1 clearvalue"  onClick={this.clearvalue}>x</span>
 						<i className="eye" onClick={this.eyeclick}></i>
 					</div>

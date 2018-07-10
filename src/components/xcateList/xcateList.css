@@ -1,29 +1,36 @@
 .cateList{
 	float: left;
-	width: 79%;
+	width: 74%;
+	display: flex;
+	flex-direction: column;
+	height: 600px;
 }
-.cateList-first{
-	
+.cateList>ul{
+	flex: 1;
+	overflow-x: hidden;
+}
+.none{
+	display: none;
 }
 .cateList-first .top-banner{
 	display: block;
-	height: 266px;
+	height: 100px;
 	width: 100%;
 	text-align: center;
-	padding-top: 30px;
+	padding-top: 10px;
 }
 .cateList-first .top-banner img{
-	width: 529px;
-	height: 240px;
+	width: 90%;
+	height: 100px;
 }
 .list-hd{
-	font-size: 30px;
+	font-size: 16px;
 	text-align: center;
-	line-height: 60px;
+	line-height: 30px;
 }
 .clear{
 	overflow: hidden;
-	padding: 30px;
+	padding: 10px;
 }
 .clear .cateList-third{
 	float: left;
@@ -32,8 +39,9 @@
 	
 }
 .clear .cateList-third img{
-	width: 100%;
+	width: 90%;
 }
 .clear .cateList-third dd{
 	font-size: 12px;
+	color: #333333;
 }
