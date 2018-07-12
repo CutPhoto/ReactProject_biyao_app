@@ -10,7 +10,8 @@ class Login extends Component {
 			textcontent:'登录',
 			chooseStyle:true,
 			isPassword:true,
-			
+			userPhone:'',
+			passWord:''
 		}
 		this.eyeclick = this.eyeclick.bind(this)
 		this.clearvalue = this.clearvalue.bind(this)
@@ -30,22 +31,54 @@ class Login extends Component {
 	showvaule(e){
 		e.target.parentNode.children[1].style.display="block";
 	}
+	//双向绑定用户输入的手机号
+	inputUserPhone(e){
+		this.setState({
+			userPhone : e.target.value
+		})
+		
+	}
+	//双向绑定用户输入的密码
+	inputPassWord(e){
+		this.setState({
+			passWord : e.target.value
+		})
+	}
+	//登陆事件
+	login(){
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {
+			if(xhr.readyState == 4) {
+				alert(xhr.responseText);
+				if(xhr.responseText=="登录成功！"){
+					window.location.href="/Myorder";
+				}
+			}
+		}
+		xhr.open("post",'http://localhost:8081/login', true);
+		//用post请求必须加上这一句
+		xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+		//4.向服务器发送请求
+		xhr.send(`userPhone=${this.state.userPhone}&passWord=${this.state.passWord}`);
+	}
 	render() {
 		return (
 				<div className="Login">	
 					<HeaderLogin isShowEditor={this.state.isShowEditor} textcontent={this.state.textcontent}/>
 					<div className="logincontent" style={{marginTop:'60px'}}>
 						<div style={{position:'relative'}}>
-							<input placeholder="请输入手机号" type="text" onInput={this.showvaule}/>
+							<input placeholder="请输入手机号" value={this.state.userPhone} onChange={this.inputUserPhone.bind(this)} type="text" onInput={this.showvaule}/>
 							<span className="clearvalue0 clearvalue" onClick={this.clearvalue} >x</span>
 						</div>
 						<div style={{position:'relative'}}>		
-							<input placeholder="请输入登录密码" type = {this.state.isPassword? 'password':'text'} onInput={this.showvaule}/>
+							<input placeholder="请输入登录密码" value={this.state.passWord} onChange={this.inputPassWord.bind(this)} type = {this.state.isPassword? 'password':'text'} onInput={this.showvaule}/>
 							<span className="clearvalue1 clearvalue"  onClick={this.clearvalue}>x</span>
 							<i className="eye" onClick={this.eyeclick}></i>
 						</div>
 						<p>必要不会以任何理由要求您汇款，谨防诈骗。</p>
-						<LoginBtn chooseStyle={this.state.chooseStyle} btncontent="登录"/>
+						<div onClick={this.login.bind(this)}>
+						<LoginBtn chooseStyle={this.state.chooseStyle} btncontent="登录" />
+						</div>
 						<LoginBtn chooseStyle={!this.state.chooseStyle} btncontent="验证码登录"/>
 						<p style={{marginTop:'40px',fontSize:'16px',height:'40px'}}><a>还没帐号？快速注册</a><a>忘记密码!</a></p>
 					</div>
@@ -56,7 +89,8 @@ class Login extends Component {
 						<div style={{textAlign:'center'}}>
 							<i className="qqlogin"></i>
 						</div>
-					</div>		
+					</div>
+					
 				</div>
 			)
 	}

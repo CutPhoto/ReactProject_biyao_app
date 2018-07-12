@@ -2,8 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" id="vp">
     <meta name="theme-color" content="#000000">
+    <script type="text/javascript">
+    var wd = document.documentElement.clientWidth*window.devicePixelRatio/10;
+    //物理像素*设备像素比=真实像素
+//  document.getElementsByTagName("html")[0].style.fontSize = wd + "px";
+    // 把屏幕的倍率缩小到N分之一（N是window.devicePixelRatio）
+    var scale = 1/window.devicePixelRatio;
+//  var mstr = 'initial-scale='+ scale +', maximum-scale='+ scale +', minimum-scale='+ scale +', user-scalable=no';
+//  document.getElementById("vp").content = mstr;
+    </script>
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
@@ -20,17 +29,6 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
-    <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
-    <script>
-      if ('addEventListener' in document) {
-        document.addEventListener('DOMContentLoaded', function() {
-          FastClick.attach(document.body);
-        }, false);
-      }
-      if(!window.Promise) {
-        document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
-      }
-    </script>
   </head>
   <body>
     <noscript>

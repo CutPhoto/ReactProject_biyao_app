@@ -1,0 +1,25 @@
+.txq_header {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+    margin-bottom: 50px;
+}
+.txq_item {
+    border-bottom: 1px dotted #D9D9D9;
+    line-height: 29px;
+    font-size: 14px;
+    text-align: left;
+    padding: 8px 17px;
+}
+.txq_item dt {
+    float: left;
+    width: 108px;
+    color: #828282;
+}
+.txq_item dl {
+    margin: 0;
+}
+.txq_item dd {
+    margin-left: 110px;
+    color: #353535;
+}

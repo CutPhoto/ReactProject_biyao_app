@@ -1,0 +1,25 @@
+.jingxuan_box{
+	background-color: #fff;
+	margin-top: 10px;
+}
+.jingxuan_box h5{
+	text-align: center;
+	line-height: 30px;
+}
+.jingxuang_item{
+	
+}
+.jingxuang_item img{
+	width: 100%;
+	height: 150px;
+}
+.jingxuang_item .jingxuan_txt{
+	display: flex;
+	justify-content: space-between;
+	height: 40px;
+	padding:0 10px;
+	font-size: 14px;
+}
+.jingxuan_sprice{
+	color:#F7A701;
+}

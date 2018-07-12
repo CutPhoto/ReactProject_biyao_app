@@ -1,0 +1,13 @@
+.goodsDtails_banner .swiper-container img{
+    width: 100%;
+    height: 360px;
+} 
+.goodsDtails_banner .swiper-pagination{
+	float: right;
+	width: 58px;
+	text-align: center;
+	position: absolute;
+	left: 78%;
+    bottom: 21px;
+    color: #fff;
+}

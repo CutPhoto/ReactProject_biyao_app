@@ -1,0 +1,114 @@
+.gl-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 46px;
+    background-color: #fff;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+}
+.gl-other-wrap {
+    position: relative;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    align-items: center;
+    -webkit-align-items: center;
+}
+.customer-service, .shop-car {
+    position: relative;
+    width: 48px;
+    height: 100%;
+    text-align: center;
+}
+.gl-icon {
+    display: block;
+    font-size: 19px;
+    margin-bottom: -10px;
+}
+#liveServerBtn {
+    cursor: pointer;
+}
+.gl-shop-car-text, .gl-service-text {
+    color: #353535;
+    font-size: 9px;
+}
+.customer-service::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    border-right: 1px solid #ccc;
+    top: 0;
+    width: 1px;
+    height: 48px;
+    transform: scaleX(0.5);
+    -webkit-transform: scaleX(0.5);
+}
+.gl-other-wrap::after {
+    content: "";
+    position: absolute;
+    top: -.5px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+}
+.choose-gl-btn {
+    height: 100%;
+    line-height: 48px;
+    text-align: center;
+    background-color: #8443a4;
+    color: #fff;
+    font-size: 14px;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    font-family: PingFang-SC-Medium;
+}
+.choose-bottom-btn-wrap {
+    position: relative;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.choose-bottom-btn-wrap li {
+    position: relative;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    font-size: .3rem;
+    width: 50%;
+    height: 48px;
+}
+.buy-shopcar {
+	width:50%;
+	height: 100%;
+    color: #fff;
+    background-color: #e7b32b;
+}
+.buy-shopcar::after {
+    content: "";
+    position: absolute;
+    top: -.5px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+}
+.buy-now, .buy-now-choose {
+    color: #fff;
+    background-color: #7e4395;
+}
+.gl-service-text{
+	line-height: 18px;
+}
