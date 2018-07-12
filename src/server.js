@@ -105,7 +105,7 @@ app.get('/removeToCart', function(req, res) {
 		}
 	});
 })
-//减少购物车其中一项的数量(需要传入suid,num)
+//减少购物车其中一项的数量(需要传入suid)
 app.get('/jianshaoToCart', function(req, res) {
 	request.post({url:'http://qxu1142150189.my3w.com/api/jianshao.php', form:req.body},function(error, response, body) {
 		if(!error && response.statusCode == 200) {
@@ -113,7 +113,14 @@ app.get('/jianshaoToCart', function(req, res) {
 		}
 	});
 })
-
+//添加购物车其中一项的数量(需要传入suid)
+app.get('/tianjiaToCart', function(req, res) {
+	request.post({url:'http://qxu1142150189.my3w.com/api/tianjia.php', form:req.body},function(error, response, body) {
+		if(!error && response.statusCode == 200) {
+			res.send(body) // Show the HTML for the baidu homepage.
+		}
+	});
+})
 
 
 

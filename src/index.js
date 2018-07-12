@@ -8,6 +8,8 @@ import Login from './pages/Login'
 import Myregister from './pages/Myregister'
 import Changepassword from './pages/Changepassword'
 import Myorder from './pages/Myorder'
+
+import GoodsDetail from './pages/goodsDetail/goodsDetail'
 //引入阿里ant样式
 // import 'antd-mobile/dist/antd-mobile.css';
 import registerServiceWorker from './registerServiceWorker';
@@ -61,6 +63,7 @@ ReactDOM.render(
 		<Provider store={ store } >
 			<div>	
 				<Route exact path="/classify" component={Classify}/>
+				<Route exact path="/goodsDetail" component={GoodsDetail}/>
 				<Route exact path="/home" component={Home}/>
 				<Route exact path='/search/searchResult' component={SearchResult}/>
 				<Route exact path='/article' component={SbysArticle}/>

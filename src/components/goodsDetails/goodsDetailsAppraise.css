@@ -1,0 +1,51 @@
+.gl-comment-content {
+	padding:10px;
+}
+
+.gl-comment-detial-title {
+	font-size: 13px;
+	line-height: 18px;
+	padding: 11px 0;
+	color: #353535;
+}
+
+.gl-comment-detial {
+	text-align: center;
+}
+
+.gl-comment-img {
+	display: flex;
+	display: -webkit-flex;
+	justify-content: flex-start;
+	-webkit-justify-content: flex-start;
+	align-items: center;
+	-webkit-align-items: center;
+	margin-bottom: 6px;
+	margin-top: 10px;
+}
+
+.gl-comment-img .comment-avatar {
+	width: 23px;
+	height: 23px;
+	border-radius: 50%;
+}
+
+.gl-comment-comment-item {
+	line-height: 20px;
+	text-align: left;
+	color: #353535;
+	word-break: break-all;
+	font-size: 12px;
+}
+
+.gl-comment-more {
+	display: inline-block;
+	margin: 14px 0 19px;
+	font-size: 12px;
+	height: 22px;
+	width: 96px;
+	line-height: 22px;
+	color: #7E4395;
+	border: 1px solid #7E4395;
+	border-radius: 12px;
+}

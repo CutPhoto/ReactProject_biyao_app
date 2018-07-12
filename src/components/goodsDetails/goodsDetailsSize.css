@@ -1,0 +1,8 @@
+.goodsDetailsSize{
+	width: 100%;
+	overflow: hidden;
+	padding: 10px;
+}
+.goodsDetailsSize .fl{
+	font-size: 12px;
+}
