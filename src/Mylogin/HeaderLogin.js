@@ -18,7 +18,7 @@ class HeaderLogin extends Component {
 					</div>	
 					<div>{this.props.textcontent}</div>
 					<div>		
-						<span style = {{display:this.props.isShowEditor?'block':'none'}}>编辑</span>	
+						<span style = {{display:this.props.isShowEditor?'block':'none'}}><span onClick={(e)=>this.props.callback(e)}>编辑</span></span>	
 					</div>	
 				</div>
 			)
