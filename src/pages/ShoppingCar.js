@@ -24,6 +24,7 @@ class ShoppingCar extends Component {
 		this.disabletrim = this.disabletrim.bind(this)
 		this.changechecked = this.changechecked.bind(this)
 		this.allClick = this.allClick.bind(this)
+		this.settlement = this.settlement.bind(this)
 	}
 	clearsure(e){
 		if(e.target.innerHTML==='确定'){
@@ -36,10 +37,10 @@ class ShoppingCar extends Component {
 			var xhr = new XMLHttpRequest();
 			xhr.onreadystatechange=function(){
 				if(xhr.readyState==4){
-					console.log(JSON.parse(xhr.responseText))
+					//console.log(JSON.parse(xhr.responseText))
 				}
 			}
-			console.log(`http://localhost:8081/removeToCart?suid=${this.state.goodslist[this.state.clearid].id}`)
+			//console.log(`http://localhost:8081/removeToCart?suid=${this.state.goodslist[this.state.clearid].id}`)
 			xhr.open('get',`http://localhost:8081/removeToCart?suid=${this.state.goodslist[this.state.clearid].id}`,true)
 			xhr.send();
 			this.setState({
@@ -192,6 +193,28 @@ class ShoppingCar extends Component {
 			//发送ajax请求
 		}
 	}
+	settlement(){
+		var res = false;
+		var arr = []
+		this.state.goodslist.forEach((item,index)=>{
+			if(item.checked) {
+				arr.push(item)
+				res = true
+				var xhr = new XMLHttpRequest();
+				xhr.open('get',`http://localhost:8081/removeToCart?suid=${item.id}`,true)
+				xhr.send();
+			}
+		})
+		this.setState({
+			goodslist:[...this.state.goodslist]
+		})
+		localStorage.setItem('settlement',JSON.stringify(arr));
+		if(res){
+			window.location.href = "/settlement" ;
+		}else{
+			alert('请选择需要结算的商品')
+		}
+	}
 	componentWillMount(){
 		var list = [] ;
 		var xhr = new XMLHttpRequest();
@@ -276,7 +299,7 @@ class ShoppingCar extends Component {
 									return total
 								})()
 							}</span>
-							<span>去结算</span>
+							<span onClick={this.settlement}>去结算</span>
 						</div>
 					</div>
 					<div style={{display:this.state.shouldclear?'block':'none'}} className="goodsclearsure">

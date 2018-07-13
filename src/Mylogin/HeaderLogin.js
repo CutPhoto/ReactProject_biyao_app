@@ -8,13 +8,16 @@ class HeaderLogin extends Component {
 			// isShowEditor:false,
 			// textcontent:'购物车'
 		}
-
+		this.backTohome = this.backTohome.bind(this)
+	}
+	backTohome(){
+		window.location.href="/home";
 	}
 	render(){
 		return (
 				<div className="HeaderLogin">
 					<div> 
-						<i className="iconfont">&#xe648;</i>
+						<i className="iconfont" onClick={this.backTohome}>&#xe648;</i>
 					</div>	
 					<div>{this.props.textcontent}</div>
 					<div>		

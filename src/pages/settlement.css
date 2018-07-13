@@ -1,0 +1,93 @@
+.settlement{
+	background-color: #ccc;
+}
+.orderitems{
+	width: 100%;
+	background: #ccc;
+}
+.orderitems .orderitem{
+	margin-bottom: 10px;
+}
+.orderitems h3{
+	background-color: #fff;
+	padding: 25px 12px 12px;
+    overflow: hidden;
+    border-bottom: dotted 1px #ccc;
+    font-size: 18px;
+}
+.orderitems .orderitem div:nth-of-type(1) img{
+	width: 60px;
+    height: 60px;
+}
+.orderitems .orderitem>div:nth-of-type(1){
+	display: flex;
+	padding: 10px;
+	margin-bottom:10px;
+	background-color: #fff;
+}
+.orderitems .orderitem>div:nth-of-type(1)>p:nth-of-type(2){
+	width: 67px;
+	text-align:right;
+}
+.orderitems .orderitem>div:nth-of-type(1)>p:nth-of-type(1){
+	flex:1;
+	padding-left: 15px;
+	font-size: 14px;
+}
+.clientmsg{
+	padding: 5%;
+	background-color: #fff;
+}
+.clientmsg textarea{
+	width:85%;
+	margin:10px 5px;
+	border:1px solid #ccc;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+}
+.clientmsg>p:nth-of-type(1)>span:nth-of-type(1){
+	float: left;
+}
+.clientmsg>p:nth-of-type(1)>span:nth-of-type(2){
+	float: right;
+}
+.sureprice{
+	width: 100%;
+	background-color: #fff;
+	position: fixed;
+	bottom: 0px;
+	height: 60px;
+	line-height: 60px;
+	display: flex;
+}
+.sureprice>span:nth-of-type(1){
+	float: left;
+	width: 70%;
+	padding-left:5%; 
+}
+.singleprice{
+	text-align: right;
+}
+.sureprice>span:nth-of-type(2){
+	float: right;
+	width: 30%;
+	text-align: right;
+	margin:10px 20px 10px 0;
+	background-color: #B768A5;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #fff;
+    border: 0;
+    text-align: center;
+    line-height: 40px;
+}
+.address{
+	padding: 5%;
+	background-color: #fff;
+}
+.alert{
+	text-indent: 2em;
+	font-size: 14px;
+	line-height: 28px;
+}

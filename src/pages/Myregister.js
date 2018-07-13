@@ -63,7 +63,7 @@ class Myregister extends Component{
 				<div onClick={this.submitClick} style={{cursor:'pointer'}}>
 					<LoginBtn chooseStyle={this.state.chooseStyle} btncontent="提交" />
 				</div>
-				<p style={{marginTop:'40px',fontSize:'16px',height:'40px'}}><a>已有帐号！立即登录</a></p>
+				<p style={{marginTop:'40px',fontSize:'16px',height:'40px'}}><a href="/login">已有帐号！立即登录</a></p>
 				<span className="msgerror">{this.state.msgerror}</span>
 			</div>
 			)

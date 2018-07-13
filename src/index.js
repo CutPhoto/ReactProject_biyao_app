@@ -8,7 +8,7 @@ import Login from './pages/Login'
 import Myregister from './pages/Myregister'
 import Changepassword from './pages/Changepassword'
 import Myorder from './pages/Myorder'
-
+import Settlement from './pages/settlement'
 import GoodsDetail from './pages/goodsDetail/goodsDetail'
 //引入阿里ant样式
 // import 'antd-mobile/dist/antd-mobile.css';
@@ -74,6 +74,7 @@ ReactDOM.render(
 	      		<Route path="/myregister" component={Myregister}/>
 	      		<Route path="/changepassword" component={Changepassword}/>
 	      		<Route path="/Myorder" component={Myorder}/>
+	      		<Route path="/settlement" component={Settlement}/>
 	      		<Backtop/>
 	      	</div>
 		</Provider>
