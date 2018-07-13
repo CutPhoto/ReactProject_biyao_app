@@ -35,6 +35,7 @@ class GoodsDetail extends Component {
 		    arr.forEach(function(items){
 		        var newArr = items.split('=');
 				suid = newArr[1];
+				
 		    })
 	    }else{
 	    		suid = '1300815218010000001'

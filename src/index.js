@@ -55,7 +55,7 @@ const store = createStore((state = {
 			return {
 				id: action.id
 			}
-			
+		
 		
 		default:
 			return state

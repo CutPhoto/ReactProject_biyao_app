@@ -34,7 +34,7 @@ class Xcategory extends Component {
 
 	
 	}
-	G
+	
 	render() {
 		return(
 			

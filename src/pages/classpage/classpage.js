@@ -37,7 +37,10 @@ class ClassPage extends Component {
 
 		
 	}
-
+	shushu(e){
+		console.log(e.target.parentNode.parentNode.className)
+		window.location.href = '/GoodsDetail/'+e.target.parentNode.parentNode.className
+	}
 			
 	//template
 	render() {
@@ -55,14 +58,14 @@ class ClassPage extends Component {
 							{
 								(function(self){
 									return self.state.hejie.map((item,index)=>{
-										return <li key={index}>
-													<a href="#">
+										return <li key={index} onClick={self.shushu.bind(self)} className={item.suid}>
+													<div>
 														<img src={item.imageUrl}  />
 														<dl>
 															<dt className="escp">{item.title}</dt>
 															<dd>￥ {item.price}</dd>
 														</dl>
-													</a>
+													</div>
 												</li>
 									})
 								})(this)
