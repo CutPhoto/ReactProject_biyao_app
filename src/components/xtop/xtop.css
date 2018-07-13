@@ -8,8 +8,9 @@
 	width: 94%;
 	height: 30px;
 	margin: 5px auto;
-	line-height: 12px;
+	line-height: 30px;
 	background-color: #f2f2f2;
+	padding-left: 10px;
 }
 .header-i{
 width: 20px;

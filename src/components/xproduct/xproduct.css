@@ -1,0 +1,46 @@
+.xproduct{
+	
+}
+.xproduct>ul>li{
+	height: 145px;
+	padding: 4px;
+	border-bottom:1px solid #CCCCCC;
+}
+.xproduct>ul>li>img{
+	width: 40%;
+	float: left;
+	margin-right:10px ;
+}
+.xproduct_m{
+	float: left;
+	width: 56%;
+}
+.xproduct_m p:nth-child(1){
+	line-height: 30px;
+	font-size: 14px;
+}
+.xproduct_m p:nth-child(2){
+	line-height: 16px;
+	font-size: 12px;
+	color:#BF9E6B;
+}
+.xproduct_m>ul{
+	height: 30px;	
+}
+.xproduct_m>ul>li{
+	float: left;
+	background-color: #BF9E6B;
+	font-size: 12px;
+	height: 14px;
+	line-height: 14px;
+	margin-top: 10px;
+	
+}
+.xproduct_m p:nth-child(4){
+	color: red;
+	font-size: 14px;
+}
+.xproduct_m p:nth-child(4)>span{
+	color: #bbbbbb;
+	font-size: 12px;
+}
