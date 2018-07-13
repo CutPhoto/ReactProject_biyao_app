@@ -1,0 +1,23 @@
+.goodsDetailsTab{
+	width: 100%;
+	overflow: hidden;
+	
+}
+.goodsDetailsTab .gl-evaluate {
+    height: 38px;
+    width: 100%;
+    background-image: url(https://static.biyao.com/m/img/product/goods_evaluate.png?v=biyao_fa5ded5);
+    background-size: 100% 100%;
+}
+.goodsDetailsTab .gl-comment-title {
+    height: 38px;
+    width: 100%;
+    line-height: 38px;
+    text-align: center;
+    color: #fff;
+    text-indent: 2em;
+}
+.goodsDetailsTab .gl-comment-title span {
+    position: relative;
+    font-size: 13px;
+}

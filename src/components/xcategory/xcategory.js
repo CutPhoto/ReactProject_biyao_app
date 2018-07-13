@@ -6,7 +6,6 @@ import './xcategory.css';
 
 import { Tabs, WhiteSpace } from 'antd-mobile';
 
-
 class Xcategory extends Component {
 	constructor(props) {
 		super(props);

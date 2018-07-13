@@ -5,6 +5,7 @@ import Xtop from '../../components/xtop/xtop.js';
 import Xcategory from '../../components/xcategory/xcategory.js';
 import XcateList from '../../components/xcateList/xcateList.js';
 import './classify.css';
+
 class Classify extends Component {
 	//data  S->V   V->S
 	constructor(props) {
@@ -16,6 +17,7 @@ class Classify extends Component {
 	//template
 	render() {
 		return(
+
 			<div className="classify">
 				<Xtop />
 				<Xcategory />

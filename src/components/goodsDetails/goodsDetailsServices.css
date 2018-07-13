@@ -1,0 +1,24 @@
+.goodsDetailsServices{
+	width: 100%;
+	overflow: hidden;
+}
+.goodsDetailsServices ul{
+	display: flex;
+	justify-content: space-around;
+	background: #fafafa;
+	height: 38px;
+	line-height: 38px;
+}
+.goodsDetailsServices ul li{
+	width:70px;
+	float: left;
+	font-size: 12px;
+}
+.goodsDetailsServices ul li:last-child{
+	flex:0.2;
+}
+.goodsDetailsServices ul li i{
+	color: #7e4395;
+	font-size: 12px;
+	margin-right: 2px;
+}
