@@ -31,9 +31,10 @@ class Xcategory extends Component {
 				{id:433,text:'个性定制',className:'escp'}
 			]
 		}
+
 	
 	}
-	
+	G
 	render() {
 		return(
 			
@@ -69,11 +70,12 @@ export default connect((state) => {
 		goryClick: (self) => {
 			var id = self.target.getAttribute('data-cateid');
 			var lists = document.querySelectorAll('.category-ul li');
-			console.log(lists);
+			
 			for(var i=0;i<lists.length;i++){
 				lists[i].className='escp'
 			}
 			self.target.className='escps'
+			window.localStorage.setItem("page",self.target.innerHTML)
 			//可以触发多个
 			dispatch({
 				type: 'goryClick',

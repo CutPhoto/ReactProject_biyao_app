@@ -8,7 +8,6 @@ class ShoppingCar extends Component {
 			isShowEditor:false,
 			textcontent:'购物车'
 		}
-
 	}
 	render() {
 		return (

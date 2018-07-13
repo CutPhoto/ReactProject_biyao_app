@@ -21,7 +21,7 @@ import { Provider } from 'react-redux';
 //createStore是创建仓库的方法
 import { createStore } from 'redux';
 //引入路由
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route} from 'react-router-dom'
 
 import Classify from './pages/classify/classify.js';
 
@@ -39,7 +39,11 @@ import SbysArticle from './pages/bysArticle';
 import Search from './pages/search/search.js';
 import Classpage from './pages/classpage/classpage.js';
 
+
 import AppraiseList from './pages/appraiseList/appraiseList.js';
+
+import Searchresult from './pages/searchresult/searchresult.js';
+
 const store = createStore((state = {
 	
 	id:279
@@ -49,7 +53,6 @@ const store = createStore((state = {
 		//触发动作
 		case 'goryClick':
 			return {
-				
 				id: action.id
 			}
 			
@@ -77,6 +80,7 @@ ReactDOM.render(
 	      		<Route path="/changepassword" component={Changepassword}/>
 	      		<Route path="/Myorder" component={Myorder}/>
 	      		<Route path="/AppraiseList" component={AppraiseList}/>
+	      		<Route path="/Search/result" component={Searchresult}/>
 	      		<Backtop/>
 	      	</div>
 		</Provider>

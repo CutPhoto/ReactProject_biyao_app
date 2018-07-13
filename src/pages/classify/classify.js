@@ -13,7 +13,7 @@ class Classify extends Component {
 		//M
 		this.state = {};
 	}
-
+	
 	//template
 	render() {
 		return(
