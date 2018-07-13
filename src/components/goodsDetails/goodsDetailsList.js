@@ -7,7 +7,6 @@ import Swiper from 'swiper'
 export default class GoodsDetailsList extends React.Component {
 	constructor(props) {
 		super(props)
-		console.log(this.props.list)
 		this.state = {
 			
 		}
@@ -20,7 +19,6 @@ export default class GoodsDetailsList extends React.Component {
 			centeredSlides: false,
 			slideToClickedSlide: true,
 			grabCursor: true,
-			history: true,
 			scrollbar: {
 				el: '.goodsDetailsList .swiper-scrollbar',
 				hide:true

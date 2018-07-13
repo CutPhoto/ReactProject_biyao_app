@@ -1,4 +1,4 @@
-.gl-footer {
+.goodsDetailsBuy .gl-footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -13,7 +13,7 @@
     -webkit-align-items: center;
     z-index: 2;
 }
-.gl-other-wrap {
+.goodsDetailsBuy .gl-other-wrap {
     position: relative;
     height: 100%;
     display: flex;
@@ -23,13 +23,13 @@
     align-items: center;
     -webkit-align-items: center;
 }
-.customer-service, .shop-car {
+.goodsDetailsBuy .customer-service, .shop-car {
     position: relative;
     width: 48px;
     height: 100%;
     text-align: center;
 }
-.gl-icon {
+.goodsDetailsBuy .gl-icon {
     display: block;
     font-size: 19px;
     margin-bottom: -10px;
@@ -37,11 +37,11 @@
 #liveServerBtn {
     cursor: pointer;
 }
-.gl-shop-car-text, .gl-service-text {
+.goodsDetailsBuy .gl-shop-car-text, .gl-service-text {
     color: #353535;
     font-size: 9px;
 }
-.customer-service::after {
+.goodsDetailsBuy .customer-service::after {
     content: "";
     position: absolute;
     right: 0;
@@ -52,7 +52,7 @@
     transform: scaleX(0.5);
     -webkit-transform: scaleX(0.5);
 }
-.gl-other-wrap::after {
+.goodsDetailsBuy .gl-other-wrap::after {
     content: "";
     position: absolute;
     top: -.5px;
@@ -63,7 +63,7 @@
     transform: scaleY(0.5);
     -webkit-transform: scaleY(0.5);
 }
-.choose-gl-btn {
+.goodsDetailsBuy .choose-gl-btn {
     height: 100%;
     line-height: 48px;
     text-align: center;
@@ -74,14 +74,14 @@
     -webkit-flex-grow: 1;
     font-family: PingFang-SC-Medium;
 }
-.choose-bottom-btn-wrap {
+.goodsDetailsBuy .choose-bottom-btn-wrap {
     position: relative;
     display: flex;
     display: -webkit-flex;
     justify-content: space-around;
     align-items: center;
 }
-.choose-bottom-btn-wrap li {
+.goodsDetailsBuy .choose-bottom-btn-wrap li {
     position: relative;
     flex-grow: 1;
     -webkit-flex-grow: 1;
@@ -89,13 +89,13 @@
     width: 50%;
     height: 48px;
 }
-.buy-shopcar {
+.goodsDetailsBuy .buy-shopcar {
 	width:50%;
 	height: 100%;
     color: #fff;
     background-color: #e7b32b;
 }
-.buy-shopcar::after {
+.goodsDetailsBuy .buy-shopcar::after {
     content: "";
     position: absolute;
     top: -.5px;
@@ -110,6 +110,6 @@
     color: #fff;
     background-color: #7e4395;
 }
-.gl-service-text{
+.goodsDetailsBuy .gl-service-text{
 	line-height: 18px;
 }

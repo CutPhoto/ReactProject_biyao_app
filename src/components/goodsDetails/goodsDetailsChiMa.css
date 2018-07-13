@@ -21,7 +21,7 @@
     width: 100%;
     z-index: 90;
 }
-.size-surface-img-wrap {
+.goodsDetailsChiMa .size-surface-img-wrap {
     width: 100%;
     position: absolute;
     top: 50%;
@@ -29,7 +29,7 @@
     transform: translate3d(-50%,-50%,0);
     -webkit-transform: translate3d(-50%,-50%,0);
 }
-.size-surface-img {
+.goodsDetailsChiMa .size-surface-img {
     display: block;
     width: 100%;
     height: 100%;

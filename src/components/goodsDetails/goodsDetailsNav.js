@@ -20,13 +20,13 @@ export default class  GoodsDetailsNav extends Component {
     }
     scrollHandler() {
         let scrollTop = window.scrollY;
-        if(scrollTop>130){
+        if(scrollTop>400){
         		this.setState({
         			opacity:1
         		});
         }else{
         		this.setState({
-        			opacity:scrollTop/13
+        			opacity:scrollTop/40
         		});
         }
         if(scrollTop<=617){

@@ -1,27 +1,26 @@
 import React, {
 	Component
 } from 'react';
-import './goodsDetailsAppraiseList.css'
+import './appraiseList.css'
 //html
-export default class GoodsDetailsAppraiseList extends Component {
+export default class AppraiseList extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			title: '评价'
 		}
 	}
+	goBack(){
+		window.history.back()
+	}
 	render() {
 		return(
-			<div className="goodsDetailsAppraiseList">
+			<div className="appraiseList">
 		      <div id="by_w">
 					<div className="main-title">
 						<div className="title-site"></div>
 						<div className="title-fix">
-							<a href="#">
-								<i className="icon" aria-hidden="true">
-									
-								</i>
-							</a>
+							<i className="icon iconfont123" onClick={this.goBack.bind(this)}>&#xe605;</i>
 							<p className="escp">评价(5471)</p>
 						</div>
 					</div>

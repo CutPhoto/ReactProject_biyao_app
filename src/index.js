@@ -38,6 +38,8 @@ import SbysArticle from './pages/bysArticle';
 
 import Search from './pages/search/search.js';
 import Classpage from './pages/classpage/classpage.js';
+
+import AppraiseList from './pages/appraiseList/appraiseList.js';
 const store = createStore((state = {
 	
 	id:279
@@ -74,6 +76,7 @@ ReactDOM.render(
 	      		<Route path="/myregister" component={Myregister}/>
 	      		<Route path="/changepassword" component={Changepassword}/>
 	      		<Route path="/Myorder" component={Myorder}/>
+	      		<Route path="/AppraiseList" component={AppraiseList}/>
 	      		<Backtop/>
 	      	</div>
 		</Provider>

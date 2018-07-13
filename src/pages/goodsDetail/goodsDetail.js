@@ -28,6 +28,18 @@ class GoodsDetail extends Component {
 		}
 	}
 	componentWillMount(){
+		let suid='';
+		//获取商品id
+		if(window.location.search){
+		    var arr = ((window.location.search).slice(1)).split('&');
+		    arr.forEach(function(items){
+		        var newArr = items.split('=');
+				suid = newArr[1];
+		    })
+	    }else{
+	    		suid = '1300815218010000001'
+	    }
+	    //获取该商品详情信息
 		var xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = function() {
 			if(xhr.readyState == 4) {
@@ -36,7 +48,7 @@ class GoodsDetail extends Component {
 					goodsArr:[...goodsArr],
 					
 				})
-				//请求同分类商品
+				//获取该商品同分类商品
 				var xhr1 = new XMLHttpRequest();
 				xhr1.onreadystatechange = function() {
 					if(xhr1.readyState == 4) {
@@ -52,7 +64,7 @@ class GoodsDetail extends Component {
 				xhr1.send(null);
 			}
 		}.bind(this);
-		xhr.open("get",'http://localhost:8081/getDetails?suid=1300815218010000001', false);
+		xhr.open("get",`http://localhost:8081/getDetails?suid=${suid}`, false);
 		//4.向服务器发送请求
 		xhr.send(null);
 		
@@ -60,7 +72,6 @@ class GoodsDetail extends Component {
 	render() {
 		return(
 			<div>
-			{console.log(this.state.classifyArr)}
 				<GoodsDetailsBanner imageUrl={this.state.goodsArr[0].imageUrl}/>
 				<GoodsDetailsTitle titles={this.state.goodsArr[0]}/>
 				<GoodsDetailsServices/>
@@ -68,7 +79,9 @@ class GoodsDetail extends Component {
 				<GoodsDetailsAddress/>
 				<GoodsDetailsSizeContrast/>
 				<GoodsDetailsTab type={"评价"}/>
+				<a href="AppraiseList">
 				<GoodsDetailsAppraise/>
+				</a>
 				<GoodsDetailsShop/>
 				<GoodsDetailsList list={this.state.classifyArr}/>
 				<GoodsDetailsTab type={"详情"}/>

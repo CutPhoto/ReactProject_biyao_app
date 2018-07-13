@@ -8,11 +8,11 @@
 	width: 100%;
 	height: 100%;
 }
-.choose-size-wrap-fadeIn {
+.goodsDetailsSizeCheck .choose-size-wrap-fadeIn {
     transform: translate3D(0,0,0);
     -webkit-transform: translate3D(0,0,0);
 }
-.choose-size-wrap, .supplier-services-detial-wrap {
+.goodsDetailsSizeCheck .choose-size-wrap, .supplier-services-detial-wrap {
     position: absolute;
     bottom: 432px;
     left: 0;
@@ -25,14 +25,14 @@
     transform: translate3D(0,100%,0);
     -webkit-transform: translate3D(0,100%,0);
 }
-.choose-size-top {
+.goodsDetailsSizeCheck .choose-size-top {
     position: relative;
     width: 100%;
     height: 106px;
     background-color: #fff;
     z-index: 10;
 }
-.choose-size-top-img {
+.goodsDetailsSizeCheck .choose-size-top-img {
     position: absolute;
     top: -11px;
     left: 10px;
@@ -41,26 +41,26 @@
     border: 1px solid #ccc;
     background-color: #fff;
 }
-.choose-size-title-price {
+.goodsDetailsSizeCheck .choose-size-title-price {
     margin-left: 123px;
     padding-top: 10px;
     width: 226px;
 }
-.choose-size-price-text, .choose-size-price-text span {
+.goodsDetailsSizeCheck .choose-size-price-text, .choose-size-price-text span {
     font-size: 17px;
     color: #f33;
 }
-.choose-size-price-text, .choose-size-price-text span {
+.goodsDetailsSizeCheck .choose-size-price-text, .choose-size-price-text span {
     font-size: 17px;
     color: #f33;
 }
-.choose-size-duration-text {
+.goodsDetailsSizeCheck .choose-size-duration-text {
     margin: 6px 0;
 }
-.choose-size-duration-text, .choose-size-duration-text span {
+.goodsDetailsSizeCheck .choose-size-duration-text, .choose-size-duration-text span {
     color: gray;
 }
-.choose-size-choosed-style {
+.goodsDetailsSizeCheck .choose-size-choosed-style {
     position: relative;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -68,17 +68,17 @@
     -webkit-line-clamp: 2;
     overflow: hidden;
 }
-.choose-size-choosed-tit {
+.goodsDetailsSizeCheck .choose-size-choosed-tit {
     position: absolute;
     color: #828282;
     font-size: 12px;
 }
-.choose-size-choosed-text {
+.goodsDetailsSizeCheck .choose-size-choosed-text {
     line-height: 14px;
     font-size: 12px;
     text-indent: 46px;
 }
-.close-choose-size {
+.goodsDetailsSizeCheck .close-choose-size {
     position: absolute;
     top: .15rem;
     right: 12px;
@@ -86,14 +86,14 @@
     height: 21px;
     font-size: 21px;
 }
-.icon {
+.goodsDetailsSizeCheck .icon {
     width: 48px;
     height: 48px;
     vertical-align: -7px;
     fill: currentColor;
     overflow: hidden;
 }
-.choose-size-top::after {
+.goodsDetailsSizeCheck .choose-size-top::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -104,11 +104,11 @@
     transform: translate3d(-50%,0,0) scaleY(0.5);
     -webkit-transform: translate3d(-50%,0,0) scaleY(0.5);
 }
-.gl-choose-lens-content-wrap {
+.goodsDetailsSizeCheck .gl-choose-lens-content-wrap {
     position: relative;
     -webkit-overflow-scrolling: touch;
 }
-.choose-size-content {
+.goodsDetailsSizeCheck .choose-size-content {
     position: relative;
     width: 100%;
     padding: 19px 10px;
@@ -117,7 +117,7 @@
     max-height: 278px;
     padding-bottom: 14px;
 }
-.choose-num-wrap {
+.goodsDetailsSizeCheck .choose-num-wrap {
     position: relative;
     display: flex;
     display: -webkit-flex;
@@ -131,7 +131,7 @@
     line-height: 48px;
     margin-top: 14px;
 }
-.choose-num-wrap::before {
+.goodsDetailsSizeCheck .choose-num-wrap::before {
     content: '';
     position: absolute;
     top: 0;
@@ -142,7 +142,7 @@
     transform: scaleY(0.5);
     -webkit-transform: scaleY(0.5);
 }
-.contral-num {
+.goodsDetailsSizeCheck .contral-num {
     display: flex;
     display: -webkit-flex;
     justify-content: space-around;
@@ -153,17 +153,17 @@
     border: 1px solid #dadada;
     border-radius: .05rem;
 }
-.count-reduce {
+.goodsDetailsSizeCheck .count-reduce {
     border-top-left-radius: .03rem;
     border-bottom-left-radius: .03rem;
 }
-.count-reduce, .count-add {
+.goodsDetailsSizeCheck .count-reduce, .count-add {
     position: relative;
     width: 24px;
     height: 24px;
     background-color: #F4F4F4;
 }
-.buy-count {
+.goodsDetailsSizeCheck .buy-count {
     height: 25px;
     line-height: 25px;
     padding: 0 14px;
@@ -171,7 +171,7 @@
     border-right: 1px solid #dadada;
     font-size: 14px;
 }
-.count-add {
+.goodsDetailsSizeCheck .count-add {
     border-top-right-radius: .03rem;
     border-bottom-right-radius: .03rem;
 }
@@ -181,7 +181,7 @@
     height: 24px;
     background-color: #F4F4F4;
 }
-.count-horizontal {
+.goodsDetailsSizeCheck .count-horizontal {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -191,7 +191,7 @@
     transform: translate3d(-50%,-1px,0);
     -webkit-transform: translate3d(-50%,-1px,0);
 }
-.count-vertical {
+.goodsDetailsSizeCheck .count-vertical {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -201,7 +201,7 @@
     transform: translate3d(-1px,-50%,0);
     -webkit-transform: translate3d(-1px,-50%,0);
 }
-.choose-size-bottom {
+.goodsDetailsSizeCheck .choose-size-bottom {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -211,7 +211,7 @@
     text-align: center;
     background-color: #fff;
 }
-.choose-bottom-btn-wrap {
+.goodsDetailsSizeCheck .choose-bottom-btn-wrap {
     position: relative;
     display: flex;
     display: -webkit-flex;
@@ -246,7 +246,7 @@
     color: #fff;
     background-color: #8443a4;
 }
-.choose-bottom-btn-wrap li {
+.goodsDetailsSizeCheck .choose-bottom-btn-wrap li {
     position: relative;
     flex-grow: 1;
     -webkit-flex-grow: 1;
@@ -254,14 +254,14 @@
     width: 50%;
     height: 46px;
 }
-.buy-shopcar-choose {
+.goodsDetailsSizeCheck .buy-shopcar-choose {
     position: relative;
     font-family: PingFang-SC-Medium;
     font-size: 15px;
     color: gray;
     background-color: #fff;
 }
-.specs-detial-normalSpecs {
+.goodsDetailsSizeCheck .specs-detial-normalSpecs {
     position: relative;
     height: 35px;
     /*width: 110px;*/
@@ -274,7 +274,7 @@
     box-sizing: border-box;
     font-size: 13px;
 }
-.Specs-list {
+.goodsDetailsSizeCheck .Specs-list {
     display: flex;
     display: -webkit-flex;
     justify-content: flex-start;
@@ -285,6 +285,6 @@
     -webkit-flex-wrap: wrap;
     margin-top: .2rem;
 }
-.choose-title-wrap {
+.goodsDetailsSizeCheck .choose-title-wrap {
     padding-top: .4rem;
 }
