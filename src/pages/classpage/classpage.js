@@ -39,7 +39,7 @@ class ClassPage extends Component {
 	}
 	shushu(e){
 		console.log(e.target.parentNode.parentNode.className)
-		window.location.href = '/GoodsDetail/?suid='+e.target.parentNode.parentNode.className
+		window.location.href = '/goodsDetail/?suid='+e.target.parentNode.parentNode.className
 	}
 			
 	//template

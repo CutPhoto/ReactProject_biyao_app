@@ -6,11 +6,8 @@
     height: 46px;
     background-color: #fff;
     display: flex;
-    display: -webkit-flex;
     justify-content: center;
-    -webkit-justify-content: center;
     align-items: center;
-    -webkit-align-items: center;
     z-index: 2;
 }
 .goodsDetailsBuy .gl-other-wrap {
@@ -19,9 +16,7 @@
     display: flex;
     display: -webkit-flex;
     justify-content: flex-start;
-    -webkit-justify-content: flex-start;
     align-items: center;
-    -webkit-align-items: center;
 }
 .goodsDetailsBuy .customer-service, .shop-car {
     position: relative;
@@ -50,7 +45,6 @@
     width: 1px;
     height: 48px;
     transform: scaleX(0.5);
-    -webkit-transform: scaleX(0.5);
 }
 .goodsDetailsBuy .gl-other-wrap::after {
     content: "";
@@ -61,7 +55,6 @@
     width: 100%;
     border-top: 1px solid #ccc;
     transform: scaleY(0.5);
-    -webkit-transform: scaleY(0.5);
 }
 .goodsDetailsBuy .choose-gl-btn {
     height: 100%;

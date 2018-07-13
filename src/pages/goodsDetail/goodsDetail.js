@@ -80,7 +80,7 @@ class GoodsDetail extends Component {
 				<GoodsDetailsAddress/>
 				<GoodsDetailsSizeContrast/>
 				<GoodsDetailsTab type={"评价"}/>
-				<a href="AppraiseList">
+				<a href="http://localhost:3000/AppraiseList">
 				<GoodsDetailsAppraise/>
 				</a>
 				<GoodsDetailsShop/>
