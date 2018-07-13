@@ -5,7 +5,7 @@ import Xtop from '../../components/xtop/xtop.js';
 import Xcategory from '../../components/xcategory/xcategory.js';
 import XcateList from '../../components/xcateList/xcateList.js';
 import './classify.css';
-
+import PublicButtom from '../../Mylogin/PublicButtom.js';
 class Classify extends Component {
 	//data  S->V   V->S
 	constructor(props) {
@@ -22,6 +22,7 @@ class Classify extends Component {
 				<Xtop />
 				<Xcategory />
 				<XcateList />
+				<PublicButtom />
 			</div>
 		);
 	}

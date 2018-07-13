@@ -6,7 +6,7 @@ import $ from 'jquery'
 
 import Xheader from '../components/home/header';
 import Xpanel from '../components/home/panel/panel';
-
+import PublicButtom from '../Mylogin/PublicButtom.js';
 class Home extends Component {
 	constructor(props) {
 		super(props)
@@ -38,6 +38,7 @@ class Home extends Component {
 				}}>
 				<Xheader/>
 				<Xpanel/>
+				<PublicButtom />
 			</div>
 		)
 

@@ -24,12 +24,12 @@ export default class Xtuijian extends Component {
 		$('.weinituijian_content').on("click", (e) => {
 			let target = e.target
 			if(target.tagName.toLowerCase() === "img") {
-				var goodsSuid = target.parentNode.parentNode.getAttribute('data-guid');
+				var goodsSuid = target.parentNode.getAttribute('data-guid');
 				var currentGoods = goodsData.filter(function(item) {
 					return item.suid === goodsSuid;
 				})[0];
-				console.log(currentGoods);
 				localStorage.setItem('goodsSuid', JSON.stringify(currentGoods))
+				window.location.href = '/goodsDetail/?suid='+goodsSuid
 			}
 		})
 	}
@@ -43,14 +43,14 @@ export default class Xtuijian extends Component {
 					{
 						this.state.goodsData.map((item,index)=>{
 								return <li data-guid={item.suid} className="weinituijian_item" key={index}>
-											<a href="/addShoppingCar">
+											
 												<img src={item.imageUrl}/>
 												<dl className="weinituijian_item_dl">
 													<dd className="weinituijian_item_da">{item[6]}</dd>
 													<dd className="weinituijian_item_db">{item.title}</dd>
 													<dd className="weinituijian_item_dc">{item.price}</dd>
 												</dl>
-											</a>
+											
 										</li>
 							
 						})
