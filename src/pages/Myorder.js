@@ -2,10 +2,43 @@ import React,{ Component } from 'react'
 import PublicButtom from '../Mylogin/PublicButtom'
 import  './Myorder.css'
 class Myorder extends Component{
+	constructor(props) {
+		super(props);
+		this.state = {
+			userPhone:null
+		}
+		this.exitlogin = this.exitlogin.bind(this)
+	}
+	componentWillMount() {
+		var cookies = document.cookie;
+		if(cookies){
+			var arr =cookies.split('; ');
+			arr.forEach((item)=>{
+				var items = item.split('=')
+				if(items[0]=="biyaologin"){
+					if(!items[1])
+					window.location.href = "/login";
+					this.setState({
+						userPhone: items[1]
+					})
+				}
+			})
+		}else{
+			window.location.href = "/login";
+		}
+	} 
+	exitlogin() {
+		var now = new Date();
+		now.setDate(now.getDate()- 1)
+		document.cookie = `biyaologin = null; expires=${now.toUTCString()}; path=/ `
+		window.location.href = "/login";
+	}
 	render(){
 		return(
 				<div className="Myorder">
-					<div></div>	
+					<div className="Myorderheader">
+						<p>欢迎！{this.state.userPhone}</p>
+					</div>	
 					<div>
 						<p>我的订单<i>&gt;</i></p>
 						<div className="iconText">
@@ -49,7 +82,7 @@ class Myorder extends Component{
 							<a>下载App</a>
 							<a>关于必要</a>
 						</div>
-						<div><a>by_UDlUPnCm</a><a>|</a><a>退出</a></div>
+						<div><a>{this.state.userPhone}</a><a>|</a><a onClick = {this.exitlogin}>退出</a></div>
 						<div>Copyright © 2018, BIYAO.COM</div>
 					</div>
 					<PublicButtom />

@@ -5,6 +5,7 @@ ul,li{
 }
 .PublicButtom {
 	position: fixed;
+	z-index: 1;
 	bottom: 0;
 	width: 100%;
 	background-color: #fff;

@@ -51,16 +51,29 @@ class Login extends Component {
 			if(xhr.readyState == 4) {
 				alert(xhr.responseText);
 				if(xhr.responseText=="登录成功！"){
+					var now = new Date();
+					now.setDate(now.getDate()+7)
+					document.cookie =`biyaologin = ${this.state.userPhone}; expires= ${now.toUTCString()}; path= / ;`
 					window.location.href="/Myorder";
 				}
 			}
-		}
+		}.bind(this)
 		xhr.open("post",'http://localhost:8081/login', true);
 		//用post请求必须加上这一句
 		xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
 		//4.向服务器发送请求
 		xhr.send(`userPhone=${this.state.userPhone}&passWord=${this.state.passWord}`);
 	}
+	componentWillMount() {
+		var cookies = document.cookie;
+		var arr = cookies.split('; ');
+		arr.forEach((item)=>{
+			item.split('=')
+			if(item[0]==='biyaologin') {
+				window.location.href="/Myorder";
+			}
+		})
+	} 
 	render() {
 		return (
 				<div className="Login">	
@@ -80,7 +93,7 @@ class Login extends Component {
 						<LoginBtn chooseStyle={this.state.chooseStyle} btncontent="登录" />
 						</div>
 						<LoginBtn chooseStyle={!this.state.chooseStyle} btncontent="验证码登录"/>
-						<p style={{marginTop:'40px',fontSize:'16px',height:'40px'}}><a>还没帐号？快速注册</a><a>忘记密码!</a></p>
+						<p style={{marginTop:'40px',fontSize:'16px',height:'40px'}}><a href="/Myregister">还没帐号？快速注册</a><a href = "/changepassword">忘记密码!</a></p>
 					</div>
 					<div className="partnerLogins">
 						<div className="line">

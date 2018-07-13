@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -8,7 +9,7 @@ import Login from './pages/Login'
 import Myregister from './pages/Myregister'
 import Changepassword from './pages/Changepassword'
 import Myorder from './pages/Myorder'
-
+import Settlement from './pages/settlement'
 import GoodsDetail from './pages/goodsDetail/goodsDetail'
 //引入阿里ant样式
 // import 'antd-mobile/dist/antd-mobile.css';
@@ -81,6 +82,7 @@ ReactDOM.render(
 	      		<Route path="/Myorder" component={Myorder}/>
 	      		<Route path="/AppraiseList" component={AppraiseList}/>
 	      		<Route path="/Search/result" component={Searchresult}/>
+	      		<Route path="/settlement" component={Settlement}/>
 	      		<Backtop/>
 	      	</div>
 		</Provider>

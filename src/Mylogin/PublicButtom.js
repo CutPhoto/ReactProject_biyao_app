@@ -9,23 +9,36 @@ class PublicButtom extends Component{
               {text:'购物车',tabcolorBool:false},
               {text:'我的',tabcolorBool:false}
             ],
-      html: [ <i className="iconfont" >&#xe648;</i>,
-              <i className="iconfont" >&#xe7f9;</i>,
-              <i className="iconfont" >&#xe61b;</i>,
-              <i className="iconfont" >&#xe638;</i>
+      html: [ <a href="/home"><i className="iconfont" >&#xe648;</i></a>,
+              <a href="/classify"><i className="iconfont" >&#xe7f9;</i></a>,
+              <a href="/shoppingcar"><i className="iconfont" >&#xe61b;</i></a>,
+              <a href="/Myorder"><i className="iconfont" >&#xe638;</i></a>
             ],
       
     }
-    this.navClick=this.navClick.bind(this);
+
   }
-  navClick(i){
+  componentDidMount() {
     for(let i = 0; i < this.state.pblist.length ;i++){
       this.state.pblist[i].tabcolorBool = false;
     }
-    i.tabcolorBool = true;
-    var pblist = this.state.pblist
+    switch(window.location.pathname){
+      case '/home':
+      this.state.pblist[0].tabcolorBool = true
+      break;
+      case '/classify':
+      this.state.pblist[1].tabcolorBool = true
+      break;
+      case '/shoppingcar':
+      this.state.pblist[2].tabcolorBool = true
+      break;
+      case '/Myorder':
+      this.state.pblist[3].tabcolorBool = true
+      break;
+    }
+    var arr = [...this.state.pblist];
     this.setState({
-      pblist:pblist
+      pblist:arr
     })
   }
   render(){
@@ -35,7 +48,7 @@ class PublicButtom extends Component{
             {
               (function(self){
                 return self.state.pblist.map((item,index)=>{
-                  return <li key={item.text} onClick={()=>self.navClick(item)} className={item.tabcolorBool?"tabcolor":""}>
+                  return <li key={item.text} className={item.tabcolorBool?"tabcolor":""}>
                         {self.state.html[index]}
                         <p>{item.text}</p>
                   </li>
