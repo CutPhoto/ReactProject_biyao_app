@@ -20,7 +20,7 @@ export default class GoodsDetailsPage extends Component {
      商品名称
     </dt>
     <dd>
-     80S双面布丝光柔滑短T（2件装）5005
+     {this.props.title1}
     </dd>
    </dl>
   </div>

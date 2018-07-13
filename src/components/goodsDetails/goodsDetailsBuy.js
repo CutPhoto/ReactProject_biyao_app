@@ -7,8 +7,26 @@ export default class GoodsDetailsBuy extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			title: '评价'
+			toCart:false
 		}
+	}
+	toCart(){
+		this.setState({
+			toCart:true
+		})
+		setTimeout(()=>{
+			this.setState({
+			toCart:false
+		})
+		},1000)
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {
+			if(xhr.readyState == 4) {
+			}
+		}
+		xhr.open("get",`http://localhost:8081/addToCart?suid=${this.props.suid}`, false);
+		//4.向服务器发送请求
+		xhr.send(null);
 	}
 	render() {
 		return(
@@ -30,11 +48,17 @@ export default class GoodsDetailsBuy extends Component {
 					
 						<div className="choose-gl-btn">
 							<ul className="choose-bottom-btn-wrap">
-								<li className="buy-shopcar">加入购物车</li>
+								<li className="buy-shopcar" onClick={this.toCart.bind(this)}>加入购物车</li>
 								<li className="buy-now">立即购买</li>
 							</ul>
 						</div>
-					
+						<div id="toast" style={{opacity: this.state.toCart?1:0,display:this.state.toCart?'block':'none'}}>
+					        <div className="weui-mask_transparent"></div>
+					        <div className="weui-toast">
+					            <i className="weui-icon-success-no-circle weui-icon_toast"></i>
+					            <p className="weui-toast__content">已加入购物车</p>
+					        </div>
+					    </div>
 					
 				</div>
 		    </div>

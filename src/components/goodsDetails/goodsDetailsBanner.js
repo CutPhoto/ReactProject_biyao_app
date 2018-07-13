@@ -5,11 +5,10 @@ import '../../swiper-4.3.3.min.css'
 import './goodsDetailsBanner.css'
 import Swiper from 'swiper'
 export default class GoodsDetailsBanner extends React.Component {
-	constructor() {
-		super()
+	constructor(props) {
+		super(props);
 		this.state = {
-			fristImgSrc:'https://bfs.biyao.com/group1/M00/3F/A2/rBACYVsx1C2AFJ73AACFq657mFQ773.jpg',
-			imgsrc: ['https://bfs.biyao.com/group1/M00/3F/A2/rBACYVsx1C2AFJ73AACFq657mFQ773.jpg','https://bfs.biyao.com/group1/M00/3F/A2/rBACYVsx1C2AFJ73AACFq657mFQ773.jpg','https://bfs.biyao.com/group1/M00/3F/A2/rBACYVsx1C2AFJ73AACFq657mFQ773.jpg','https://bfs.biyao.com/group1/M00/3F/A2/rBACYVsx1C2AFJ73AACFq657mFQ773.jpg','https://bfs.biyao.com/group1/M00/3F/A2/rBACYVsx1C2AFJ73AACFq657mFQ773.jpg']
+			imgsrc: [this.props.imageUrl,this.props.imageUrl,this.props.imageUrl,this.props.imageUrl,this.props.imageUrl]
 		}
 	}
 

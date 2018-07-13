@@ -7,7 +7,7 @@ export default class GoodsDetailsTab extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			title:'评价'
+			title:this.props.type
 		}
 	}
 	render() {

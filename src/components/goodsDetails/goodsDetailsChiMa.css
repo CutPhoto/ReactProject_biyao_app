@@ -1,0 +1,36 @@
+.goodsDetailsChiMa{
+	overflow: hidden;
+	/*display: none;*/
+}
+.my-popuse-wrap, .supplier-services-explain-wrap, .sign-wrap, .exhibition-wrap, .size-surface-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.4);
+    z-index: 999;
+}
+.gl-bg-corver, .gl-bg-corver-supplier, .gl-bg-corver-exhibition, .bg-corver-size-surface {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 90;
+}
+.size-surface-img-wrap {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    -webkit-transform: translate3d(-50%,-50%,0);
+}
+.size-surface-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

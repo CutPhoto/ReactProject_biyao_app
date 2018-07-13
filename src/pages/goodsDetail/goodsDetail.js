@@ -22,40 +22,58 @@ import GoodsDetailsNav from './../../components/goodsDetails/goodsDetailsNav.js'
 class GoodsDetail extends Component {
 	constructor(props) {
 		super()
-		this.state = {}
+		this.state = {
+			goodsArr:[],
+			classifyArr:[]
+		}
 	}
-	componentDidMount(){
-//		var xhr = new XMLHttpRequest();
-//		xhr.onreadystatechange = function() {
-//			if(xhr.readyState == 4) {
-//				alert(xhr.responseText);
-//				if(xhr.responseText=="登录成功！"){
-//					window.location.href="/Myorder";
-//				}
-//			}
-//		}
-//		xhr.open("post",'http://localhost:8081/login', true);
-//		//用post请求必须加上这一句
-//		xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
-//		//4.向服务器发送请求
-//		xhr.send(`userPhone=${this.state.userPhone}&passWord=${this.state.passWord}`);
+	componentWillMount(){
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {
+			if(xhr.readyState == 4) {
+				let goodsArr=JSON.parse(xhr.responseText);
+				this.setState({
+					goodsArr:[...goodsArr],
+					
+				})
+				//请求同分类商品
+				var xhr1 = new XMLHttpRequest();
+				xhr1.onreadystatechange = function() {
+					if(xhr1.readyState == 4) {
+						let goodsArr=JSON.parse(xhr1.responseText);
+						this.setState({
+							classifyArr:[...goodsArr],
+						})
+						
+					}
+				}.bind(this);
+				xhr1.open("get",`http://localhost:8081/getClassify?classify=${goodsArr[0].classify}`, false);
+				//4.向服务器发送请求
+				xhr1.send(null);
+			}
+		}.bind(this);
+		xhr.open("get",'http://localhost:8081/getDetails?suid=1300815218010000001', false);
+		//4.向服务器发送请求
+		xhr.send(null);
+		
 	}
 	render() {
 		return(
 			<div>
-				<GoodsDetailsBanner/>
-				<GoodsDetailsTitle/>
+			{console.log(this.state.classifyArr)}
+				<GoodsDetailsBanner imageUrl={this.state.goodsArr[0].imageUrl}/>
+				<GoodsDetailsTitle titles={this.state.goodsArr[0]}/>
 				<GoodsDetailsServices/>
-				<GoodsDetailsSize/>
+				<GoodsDetailsSize imageUrl={this.state.goodsArr[0]}/>
 				<GoodsDetailsAddress/>
 				<GoodsDetailsSizeContrast/>
-				<GoodsDetailsTab/>
+				<GoodsDetailsTab type={"评价"}/>
 				<GoodsDetailsAppraise/>
 				<GoodsDetailsShop/>
-				<GoodsDetailsList/>
-				<GoodsDetailsTab/>
-				<GoodsDetailsPage/>
-				<GoodsDetailsBuy/>
+				<GoodsDetailsList list={this.state.classifyArr}/>
+				<GoodsDetailsTab type={"详情"}/>
+				<GoodsDetailsPage title1={this.state.goodsArr[0].title}/>
+				<GoodsDetailsBuy suid={this.state.goodsArr[0].suid}/>
 				<GoodsDetailsNav/>
 			</div>
 		)

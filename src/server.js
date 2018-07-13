@@ -91,7 +91,7 @@ app.post('/signin', function(req, res) {
 });
 //添加购物车路由(需要传入suid,num)
 app.get('/addToCart', function(req, res) {
-	request.post({url:'http://qxu1142150189.my3w.com/api/add.php', form:req.body},function(error, response, body) {
+	request.post({url:'http://qxu1142150189.my3w.com/api/add.php', form:req.query},function(error, response, body) {
 		if(!error && response.statusCode == 200) {
 			res.send(body) // Show the HTML for the baidu homepage.
 		}
@@ -99,7 +99,7 @@ app.get('/addToCart', function(req, res) {
 });
 //删除购物车其中一项(需要传入suid)
 app.get('/removeToCart', function(req, res) {
-	request.post({url:'http://qxu1142150189.my3w.com/api/remove.php', form:req.body},function(error, response, body) {
+	request.post({url:'http://qxu1142150189.my3w.com/api/remove.php', form:req.query},function(error, response, body) {
 		if(!error && response.statusCode == 200) {
 			res.send(body) // Show the HTML for the baidu homepage.
 		}
@@ -107,7 +107,7 @@ app.get('/removeToCart', function(req, res) {
 })
 //减少购物车其中一项的数量(需要传入suid)
 app.get('/jianshaoToCart', function(req, res) {
-	request.post({url:'http://qxu1142150189.my3w.com/api/jianshao.php', form:req.body},function(error, response, body) {
+	request.post({url:'http://qxu1142150189.my3w.com/api/jianshao.php', form:req.query},function(error, response, body) {
 		if(!error && response.statusCode == 200) {
 			res.send(body) // Show the HTML for the baidu homepage.
 		}
@@ -115,7 +115,7 @@ app.get('/jianshaoToCart', function(req, res) {
 })
 //添加购物车其中一项的数量(需要传入suid)
 app.get('/tianjiaToCart', function(req, res) {
-	request.post({url:'http://qxu1142150189.my3w.com/api/tianjia.php', form:req.body},function(error, response, body) {
+	request.post({url:'http://qxu1142150189.my3w.com/api/tianjia.php', form:req.query},function(error, response, body) {
 		if(!error && response.statusCode == 200) {
 			res.send(body) // Show the HTML for the baidu homepage.
 		}

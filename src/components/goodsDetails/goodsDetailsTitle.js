@@ -5,11 +5,12 @@ import './goodsDetailsTitle.css'
 //html
 export default class GoodsDetailsTitle extends Component {
 	constructor(props) {
-		super();
+		super(props);
+
 		this.state = {
-			title:'超柔纯棉洗脸巾三盒装',
-			price:'68',
-			supplierBackground:'洁柔制造商直供'
+			title:this.props.titles.title,
+			price:this.props.titles.price,
+			supplierBackground:this.props.titles.supplierBackground
 		}
 	}
 	render() {

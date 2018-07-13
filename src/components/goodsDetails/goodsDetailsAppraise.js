@@ -2,6 +2,7 @@ import React, {
 	Component
 } from 'react';
 import './goodsDetailsAppraise.css'
+//import GoodsDetailsAppraiseList from './goodsDetailsAppraiseList.js'
 //html
 export default class GoodsDetailsAppraise extends Component {
 	constructor(props) {
@@ -24,6 +25,7 @@ export default class GoodsDetailsAppraise extends Component {
 						<div className="gl-comment-more">查看全部评论</div>
 					</div>
 			  </div>
+			  
 		    </div>
 		);
 	}
