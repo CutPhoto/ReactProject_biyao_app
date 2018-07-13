@@ -1,0 +1,64 @@
+.topicDetail_box{
+	width: 100%;
+	background-color: #fff;
+	font-size: 14px;
+}
+.topicDetail_header{
+	display: flex;
+	justify-content: space-between;
+	width:100%;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #F8F8F8;
+	padding:0 10px;
+}
+.topicDetail_banner img{
+	width: 100%;
+	height: 300px;
+}
+.topicDetail_banner p{
+	text-align: center;
+	line-height: 20px;
+}
+.topicDetail_title_p1{
+	margin-top: 10px;
+}
+.topicDetail_title_p2{
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+.topicDetail_jingxuan_box{
+	width: 100%;
+	height: 100%;
+	background-color: #E8E8E8;
+}
+.topicDetail_jingxuan_title{
+	text-align: center;
+	line-height: 50px;
+}
+.topicDetail_jingxuan_content{
+	display: flex;
+	flex-wrap: wrap;
+}
+.topicDetail_jingxuan_content_item{
+	width: 48%;
+	background-color: #fff;
+	margin: 1% 1%;
+}
+.topicDetail_jingxuan_content_item img{
+	width: 100%;
+	height: 200px;	
+}
+.topicDetail_jingxuan_content_item{
+	text-align: center;
+}
+.topicDetail_jingxuan_content_item_p1{
+	margin-top: 3px;
+}
+.topicDetail_jingxuan_content_item_p2{
+	margin: 10px 0;
+	color: #f33;
+}
+.topicDetail_jingxuan_content_item_p2:before{
+	content: "￥";
+}

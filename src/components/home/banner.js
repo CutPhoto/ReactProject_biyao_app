@@ -40,7 +40,7 @@ export default class Banner extends React.Component {
 		            {
 			    		this.state.imgsrc.map((url) => {
 			    			return <div className="swiper-slide" key={countId++} >
-			    						<img className="banner_img" src={url} />
+				    						<img className="banner_img" src={url} />
 			    				   </div>
 			    		})
 			    	}

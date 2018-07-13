@@ -1,0 +1,20 @@
+.addshopingcar_header{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	border-bottom: 1px solid #F8F8F8;
+	z-index: 10;
+}
+.addshopingcar_header_content{
+	display: flex;
+	line-height: 40px;
+}
+.addshopingcar_header_content li{
+	text-align: center;
+	width: 25%;
+}
+.addshopingcar_header_content li i{
+	margin-right: 5px;
+}

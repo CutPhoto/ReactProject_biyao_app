@@ -15,7 +15,11 @@ export default class Article extends Component {
 	render() {
 		return(
 			<div className="page article js_show article_box">
-					<div className="article_header"><a href="/home" className="iconfont icon-shouye" style={{fontSize:'25px'}}></a><span className="article_header_c">是在下输了，我的朋友比我买得欢|每周一送礼</span><i></i></div>
+					<div className="article_header">
+						<a href="/home" className="iconfont icon-shouye" style={{fontSize:'25px'}}></a>
+						<span className="article_header_c">是在下输了，我的朋友比我买得欢|每周一送礼</span>
+						<i></i>
+					</div>
 				    <div className="page__hd" style={{padding:'0 10px'}}>
 				        <h1 className="page__title" style={{fontSize:'20px'}}>是在下输了，我的朋友比我买得欢|每周一送礼</h1>
 				        <span className="author">小必姐</span>

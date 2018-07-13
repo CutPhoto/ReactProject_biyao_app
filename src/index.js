@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -36,6 +35,12 @@ import SearchResult from './pages/searchResult';
 //引入必要说article
 import SbysArticle from './pages/bysArticle';
 
+//主题详情页
+import TopicDetail from './pages/topicDetail/topicDetail';
+
+//添加购物车页
+import AddShoppingCar from './pages/addShoppingCar/addShoppingCar';
+
 
 import Search from './pages/search/search.js';
 import Classpage from './pages/classpage/classpage.js';
@@ -71,8 +76,10 @@ ReactDOM.render(
 				<Route exact path="/classify" component={Classify}/>
 				<Route exact path="/goodsDetail" component={GoodsDetail}/>
 				<Route exact path="/home" component={Home}/>
-				<Route exact path='/search/searchResult' component={SearchResult}/>
-				<Route exact path='/article' component={SbysArticle}/>
+				<Route path='/search/searchResult' component={SearchResult}/>
+				<Route path='/article' component={SbysArticle}/>
+				<Route path='/classify/topicDetail' component={TopicDetail}/>
+				<Route path='/addShoppingCar' component={AddShoppingCar}/>
 				<Route exact path="/search" component={Search}/>
 				<Route exact path="/classpage" component={Classpage}/>
 				<Route path="/shoppingcar" component={ShoppingCar}/>

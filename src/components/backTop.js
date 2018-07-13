@@ -12,12 +12,9 @@ export default class Xbacktop extends Component {
 	componentDidMount() {
 		var backtop = document.querySelector('.backtop_box');
 
-		console.log(backtop)
 
 		window.onscroll = function() {
-			// console.log(666)
 			var scrollY = window.scrollY;
-
 			if(scrollY >= 250) {
 				backtop.className = 'backtop_box backtop_active';
 			} else {

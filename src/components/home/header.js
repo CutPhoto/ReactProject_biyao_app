@@ -26,7 +26,6 @@ export default class Xheader extends React.Component {
 	}
 
 	navSortArrow() {
-		console.log(666)
 		this.setState({
 			bool: !this.state.bool
 		})
@@ -36,7 +35,7 @@ export default class Xheader extends React.Component {
 		return(
 			<div className="biyao_header">
 				<div className='header-search-box'>
-					<a href="/search/searchResult" className="header-search"><i className="header-search-icon iconfont icon-sousuo"></i><span>请输入您想要的商品</span></a>
+					<a href="/searchResult" className="header-search"><i className="header-search-icon iconfont icon-sousuo"></i><span>请输入您想要的商品</span></a>
 				</div>
 				<div className="header-nav">
 					<div className="swiper-container hid_drag_box">

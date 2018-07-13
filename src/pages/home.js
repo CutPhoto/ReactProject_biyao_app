@@ -2,33 +2,42 @@ import React, {
 	Component
 } from "react"
 
+import $ from 'jquery'
+
 import Xheader from '../components/home/header';
-import Xbanner from '../components/home/banner';
-import Xbaozheng from '../components/home/baozheng';
-import XneedToSay from '../components/home/needToSay';
-import XtabbarMiddle from '../components/home/tabbarMiddle';
-import Xjingxuan from '../components/home/jingxuan';
-import Xtuijian from '../components/home/tuijian';
+import Xpanel from '../components/home/panel/panel';
 
 class Home extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {}
 	}
+	
+	
+	componentDidMount() {
+		$.ajax({
+			type: "get",
+			url: "http://localhost:8081/getGoodsList",
+
+			data: {},
+
+			async: true,
+
+			success(data) {
+				localStorage.setItem('goodsData', data)
+			}
+		});
+	}
+
+
+
 	render() {
 		return(
-			<div style={{
+			<div className="home_container" style={{
 				backgroundColor:'#f2f2f2'
 				}}>
 				<Xheader/>
-				<div>
-					<Xbanner/>
-					<Xbaozheng/>
-					<XneedToSay/>
-					<XtabbarMiddle/>
-					<Xjingxuan/>
-					<Xtuijian/>
-				</div>
+				<Xpanel/>
 			</div>
 		)
 
