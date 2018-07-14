@@ -24,9 +24,15 @@ export default class GoodsDetailsBuy extends Component {
 			if(xhr.readyState == 4) {
 			}
 		}
-		xhr.open("get",`http://localhost:8081/addToCart?suid=${this.props.suid}`, false);
+		xhr.open("get",`http://localhost:8081/addToCart?suid=${this.props.suid.suid}`, false);
 		//4.向服务器发送请求
 		xhr.send(null);
+	}
+	toAccount(){
+		var arr = [];
+		arr.push(this.props.suid);
+		localStorage.setItem('settlement',JSON.stringify(arr))
+		window.location.href='/settlement';
 	}
 	render() {
 		return(
@@ -49,7 +55,7 @@ export default class GoodsDetailsBuy extends Component {
 						<div className="choose-gl-btn">
 							<ul className="choose-bottom-btn-wrap">
 								<li className="buy-shopcar" onClick={this.toCart.bind(this)}>加入购物车</li>
-								<li className="buy-now">立即购买</li>
+								<li className="buy-now" onClick={this.toAccount.bind(this)}>立即购买</li>
 							</ul>
 						</div>
 						<div id="toast" style={{opacity: this.state.toCart?1:0,display:this.state.toCart?'block':'none'}}>

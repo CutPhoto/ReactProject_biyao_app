@@ -11,7 +11,6 @@ class Settlement extends Component {
 	}
 	componentWillMount() {
 		var arr = JSON.parse(localStorage.getItem('settlement'))
-		console.log(arr)
 		this.setState({
 			settlement:arr
 		})
@@ -28,7 +27,6 @@ class Settlement extends Component {
 				<div  className="orderitems">
 					{
 						this.state.settlement.map((item)=>{
-								console.log(item)
 								return (
 										<div className="orderitem">
 											<h3>杂货店</h3>

@@ -87,7 +87,7 @@ class GoodsDetail extends Component {
 				<GoodsDetailsList list={this.state.classifyArr}/>
 				<GoodsDetailsTab type={"详情"}/>
 				<GoodsDetailsPage title1={this.state.goodsArr[0].title}/>
-				<GoodsDetailsBuy suid={this.state.goodsArr[0].suid}/>
+				<GoodsDetailsBuy suid={this.state.goodsArr[0]}/>
 				<GoodsDetailsNav/>
 			</div>
 		)

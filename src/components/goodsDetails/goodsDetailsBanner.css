@@ -11,3 +11,12 @@
     bottom: 21px;
     color: #fff;
 }
+.goodsDtails_banner .icon{
+	position: absolute;
+    font-size: 18px;
+    color: #ccc;
+    /* box-shadow: 1px 1px 1px #ccc; */
+    z-index: 10;
+    left: 10px;
+    top: 10px;
+}

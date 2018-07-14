@@ -23,13 +23,17 @@ export default class GoodsDetailsBanner extends React.Component {
 			},
 		})
 	}
-
+	goBack(){
+		window.history.back()
+	}
 	render() {
 		let countId = 0;
 		return(
 			<div className = 'goodsDtails_banner'>
+				<i className="icon iconfont123" onClick={this.goBack.bind(this)}>&#xe605;</i>
 		        	<div className='swiper-container'>
 		            <div className='swiper-wrapper'>
+		            
 		            {
 				    		this.state.imgsrc.map((url) => {
 				    			return <div className="swiper-slide" key={countId++} >
