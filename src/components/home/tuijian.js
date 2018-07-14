@@ -15,7 +15,6 @@ export default class Xtuijian extends Component {
 	}
 	componentDidMount() {
 		var goodsData = JSON.parse(localStorage.getItem('goodsData'))
-		console.log(goodsData)
 		this.setState({
 			goodsData: goodsData
 		})

@@ -41,8 +41,8 @@ class ShoppingCar extends Component {
 					//console.log(JSON.parse(xhr.responseText))
 				}
 			}
-			//console.log(`http://localhost:8081/removeToCart?suid=${this.state.goodslist[this.state.clearid].id}`)
-			xhr.open('get',`http://localhost:8081/removeToCart?suid=${this.state.goodslist[this.state.clearid].id}`,true)
+			//console.log(`http://10.3.134.38:8081/removeToCart?suid=${this.state.goodslist[this.state.clearid].id}`)
+			xhr.open('get',`http://10.3.134.38:8081/removeToCart?suid=${this.state.goodslist[this.state.clearid].id}`,true)
 			xhr.send();
 			this.setState({
 				goodslist:arr,
@@ -202,7 +202,7 @@ class ShoppingCar extends Component {
 				arr.push(item)
 				res = true
 				var xhr = new XMLHttpRequest();
-				xhr.open('get',`http://localhost:8081/removeToCart?suid=${item.id}`,true)
+				xhr.open('get',`http://10.3.134.38:8081/removeToCart?suid=${item.id}`,true)
 				xhr.send();
 			}
 		})
@@ -236,7 +236,7 @@ class ShoppingCar extends Component {
 				})
 			}
 		}.bind(this)
-		xhr.open('get','http://localhost:8081/getCartList',true)
+		xhr.open('get','http://10.3.134.38:8081/getCartList',true)
 		xhr.send()
 	
 		

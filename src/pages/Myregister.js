@@ -41,7 +41,7 @@ class Myregister extends Component{
 					}
 				}
 			}
-			xhr.open('post','http://localhost:8081/signin',true)
+			xhr.open('post','http://10.3.134.38:8081/signin',true)
 			xhr.setRequestHeader('content-type','application/x-www-form-urlencoded')
 			xhr.send(`userPhone=${tel}&passWord=${password}`)
 		}else{

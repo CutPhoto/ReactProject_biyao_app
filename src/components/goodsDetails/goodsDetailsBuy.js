@@ -24,7 +24,7 @@ export default class GoodsDetailsBuy extends Component {
 			if(xhr.readyState == 4) {
 			}
 		}
-		xhr.open("get",`http://localhost:8081/addToCart?suid=${this.props.suid.suid}`, false);
+		xhr.open("get",`http://10.3.134.38:8081/addToCart?suid=${this.props.suid.suid}`, false);
 		//4.向服务器发送请求
 		xhr.send(null);
 	}

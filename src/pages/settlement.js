@@ -26,9 +26,9 @@ class Settlement extends Component {
 				<div className="alert">因商品存在一定的生产周期，请仔细核实收货地址，提交订单后将不能修改收货地址。</div>
 				<div  className="orderitems">
 					{
-						this.state.settlement.map((item)=>{
+						this.state.settlement.map((item,index)=>{
 								return (
-										<div className="orderitem">
+										<div className="orderitem" key={item+index}>
 											<h3>杂货店</h3>
 											<div>
 												<img src ={item.imageUrl} />

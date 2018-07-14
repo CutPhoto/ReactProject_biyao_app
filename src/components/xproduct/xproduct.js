@@ -75,7 +75,7 @@ class Xproduct extends Component {
 					})
 			    }
 			}
-			xhr.open("get", "http://localhost:8081/getGoodsList", true);
+			xhr.open("get", "http://10.3.134.38:8081/getGoodsList", true);
 			xhr.send(null);
 	}
 	render() {

@@ -19,7 +19,6 @@ class ClassPage extends Component {
 			var xhr = new XMLHttpRequest();
 			xhr.onreadystatechange = ()=>{
 			    if(xhr.readyState == 4) {
-			        console.log(JSON.parse(xhr.responseText));
 			        var arr=JSON.parse(xhr.responseText);
 			        for(var i=0;i<arr.length;i++){
 			        	if(arr[i].classify==pagesss){
@@ -32,13 +31,13 @@ class ClassPage extends Component {
 					})
 			    }
 			}
-			xhr.open("get", "http://localhost:8081/getGoodsList", true);
+			xhr.open("get", "http://10.3.134.38:8081/getGoodsList", true);
 			xhr.send(null);
 
 		
 	}
 	shushu(e){
-		console.log(e.target.parentNode.parentNode.className)
+		
 		window.location.href = '/goodsDetail/?suid='+e.target.parentNode.parentNode.className
 	}
 			
