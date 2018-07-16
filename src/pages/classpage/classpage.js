@@ -10,7 +10,8 @@ class ClassPage extends Component {
 		//M
 		this.state = {
 			hejie:[],
-			pagess:''
+			pagess:'',
+			isShowTop:true
 		};
 	}
 	componentDidMount(){
@@ -45,7 +46,7 @@ class ClassPage extends Component {
 	render() {
 		return(
 			<div className="classPage">
-				<div className="page_top">
+				<div className="page_top" style={{display:this.state.isShowTop?'block':'none'}}>
 						<a href="/home" > <i className="iconfont123">&#xe639;</i></a>
 						<p>{this.state.pagess}</p>
 				</div>

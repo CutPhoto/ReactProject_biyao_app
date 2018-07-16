@@ -62,13 +62,11 @@ class Settlement extends Component {
 					<span>实付款： ￥{
 						((self)=>{
 							var total = 0;
-							return self.state.settlement.map((item)=>{
-								total = total*1 + item.price*1
-								
-								return total;
+							self.state.settlement.map((item)=>{
+								total = total*1 + item.price*1;
 							})
+							return total;
 						})(this)
-						
 					}</span>
 					<span>结算</span>
 				</div>

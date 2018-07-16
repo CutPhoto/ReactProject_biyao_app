@@ -8,10 +8,13 @@ import './home.css'
 import Xheader from '../components/home/header';
 import Xpanel from '../components/home/panel/panel';
 import PublicButtom from '../Mylogin/PublicButtom.js';
+import Classpage from './classpage/classpage';
 class Home extends Component {
 	constructor(props) {
 		super(props)
-		this.state = {}
+		this.state = {
+			isShowList:true
+		}
 	}
 	
 	
@@ -39,7 +42,12 @@ class Home extends Component {
 				}}>
 				<Xheader/>
 				<div className="home_main">
-				<Xpanel />
+					<div style={{display:this.state.isShowList?'block':'none'}}>
+						<Xpanel />
+					</div>
+					<div style={{display:this.state.isShowList?'none':'block'}}>
+						<Classpage/>
+					</div>
 				</div>
 				<PublicButtom />
 			</div>
