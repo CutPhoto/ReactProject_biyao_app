@@ -1,3 +1,11 @@
+.appraiseList{
+	height: 100%;
+}
+.appraiseList .by_w{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
 .appraiseList .main-title {
     position: relative;
 }
@@ -61,6 +69,8 @@
 .appraiseList .comment-wrap {
     margin-top: 10px;
     background-color: #fff;
+    flex:1;
+    overflow-x: hidden;
 }
 .appraiseList .comment-item {
     position: relative;

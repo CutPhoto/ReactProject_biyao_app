@@ -4,9 +4,7 @@ ul,li{
 	margin: 0;
 }
 .PublicButtom {
-	/*position: fixed;*/
-	z-index: 1;
-	/*bottom: 0;*/
+	z-index: 10;
 	width: 100%;
 	background-color: #fff;
 }

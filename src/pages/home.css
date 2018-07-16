@@ -1,0 +1,9 @@
+.home_container{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.home_container .home_main{
+	flex: 1;
+	overflow-x: hidden;
+}

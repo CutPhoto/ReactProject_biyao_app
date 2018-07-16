@@ -3,6 +3,7 @@ import React, {
 } from "react"
 
 import $ from 'jquery'
+import './home.css'
 
 import Xheader from '../components/home/header';
 import Xpanel from '../components/home/panel/panel';
@@ -37,7 +38,9 @@ class Home extends Component {
 				backgroundColor:'#f2f2f2'
 				}}>
 				<Xheader/>
-				<Xpanel/>
+				<div className="home_main">
+				<Xpanel />
+				</div>
 				<PublicButtom />
 			</div>
 		)

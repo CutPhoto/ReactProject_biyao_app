@@ -72,7 +72,8 @@ class GoodsDetail extends Component {
 	}
 	render() {
 		return(
-			<div>
+			<div id="goodsDetail">
+				<div	 className="goodsDetail_main">
 				<GoodsDetailsBanner imageUrl={this.state.goodsArr[0].imageUrl}/>
 				<GoodsDetailsTitle titles={this.state.goodsArr[0]}/>
 				<GoodsDetailsServices/>
@@ -87,8 +88,10 @@ class GoodsDetail extends Component {
 				<GoodsDetailsList list={this.state.classifyArr}/>
 				<GoodsDetailsTab type={"详情"}/>
 				<GoodsDetailsPage title1={this.state.goodsArr[0].title}/>
-				<GoodsDetailsBuy suid={this.state.goodsArr[0]}/>
+				
 				<GoodsDetailsNav/>
+				</div>
+				<GoodsDetailsBuy suid={this.state.goodsArr[0]}/>
 			</div>
 		)
 

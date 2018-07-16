@@ -44,9 +44,11 @@ export default class GoodsDetailsBuy extends Component {
 							<span className="gl-service-text" id="liveServerBtn">客服</span>
 						</a>
 						<div className="shop-car">
+							<a href="/shoppingcar">
 							<span className="shopcar-num none"></span>
 							<i className="Ziconfont gl-icon">&#xe635;</i>
 							<span className="gl-shop-car-text">购物车</span>
+							</a>
 						</div>
 					</div>
 					

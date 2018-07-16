@@ -7,6 +7,8 @@ class Login extends Component {
 		super(props)
 		this.state = {
 			isShowEditor:false,
+			text:'',
+			toCart:false,
 			textcontent:'登录',
 			chooseStyle:true,
 			isPassword:true,
@@ -49,13 +51,24 @@ class Login extends Component {
 		var xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = function() {
 			if(xhr.readyState == 4) {
-				alert(xhr.responseText);
-				if(xhr.responseText=="登录成功！"){
-					var now = new Date();
-					now.setDate(now.getDate()+7)
-					document.cookie =`biyaologin = ${this.state.userPhone}; expires= ${now.toUTCString()}; path= / ;`
-					window.location.href="/Myorder";
-				}
+				this.setState({
+						text:xhr.responseText,
+						toCart:true
+				})
+				setTimeout(()=>{
+						this.setState({
+						toCart:false
+						
+						})
+						if(xhr.responseText=="登录成功！"){
+							var now = new Date();
+							now.setDate(now.getDate()+7)
+							document.cookie =`biyaologin = ${this.state.userPhone}; expires= ${now.toUTCString()}; path= / ;`
+							window.location.href="/Myorder";
+						}
+						
+					},1000)
+				
 			}
 		}.bind(this)
 		xhr.open("post",'http://localhost:8081/login', true);
@@ -103,7 +116,13 @@ class Login extends Component {
 							<i className="qqlogin"></i>
 						</div>
 					</div>
-					
+					<div id="toast" style={{opacity: this.state.toCart?1:0,display:this.state.toCart?'block':'none'}}>
+					        <div className="weui-mask_transparent"></div>
+					        <div className="weui-toast">
+					            <i className="weui-icon-success-no-circle weui-icon_toast"></i>
+					            <p className="weui-toast__content">{this.state.text}</p>
+					        </div>
+					    </div>
 				</div>
 			)
 	}

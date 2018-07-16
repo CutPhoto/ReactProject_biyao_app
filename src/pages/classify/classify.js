@@ -20,8 +20,10 @@ class Classify extends Component {
 
 			<div className="classify">
 				<Xtop />
-				<Xcategory />
+				<div className="classify_main">
 				<XcateList />
+				<Xcategory />
+				</div>
 				<PublicButtom />
 			</div>
 		);
