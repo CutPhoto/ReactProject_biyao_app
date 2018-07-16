@@ -17,8 +17,9 @@ class Settlement extends Component {
 	} 
 	render(){
 		return(
-			<div className="settlement">
+			<div className="settlement" style={{display:'flex',flexDirection:"column",height:'100%'}}>
 				<HeaderLogin isShowEditor={false} textcontent="订单确认"/>
+				<div style={{flex:1,overflowX:"hidden"}}>
 				<div className="address">
 					<p>收货人：123 联系方式：13333333333</p>
 					<p>收货地址：</p>
@@ -55,6 +56,7 @@ class Settlement extends Component {
 						})
 					
 					}
+				</div>
 				</div>
 				<div className="sureprice">
 					<span>实付款： ￥{

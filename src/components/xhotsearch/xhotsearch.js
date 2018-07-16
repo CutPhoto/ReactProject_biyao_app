@@ -13,14 +13,19 @@ class Xhotsearch extends Component {
 			
 		}
 	}
+	searchul(e){
+		console.log(e.target.innerHTML)
+		document.cookie="name="+e.target.innerHTML	
+		window.location.href = '/Search/result'	
+	}
 	render() {
 		return(
 			
       	<div className="hotsearch">
 			<p>热门搜索</p>				
 			<div>
-				<ul className="hotul">
-					<li>鞋</li>
+				<ul className="hotul" onClick={this.searchul}>
+					<li>爽肤水</li>
 					<li>门锁</li>
 					<li>刀</li>
 					<li>面膜</li>

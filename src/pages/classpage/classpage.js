@@ -31,7 +31,7 @@ class ClassPage extends Component {
 					})
 			    }
 			}
-			xhr.open("get", "http://10.3.134.38:8081/getGoodsList", true);
+			xhr.open("get", "http://localhost:8081/getGoodsList", true);
 			xhr.send(null);
 
 		
@@ -46,7 +46,7 @@ class ClassPage extends Component {
 		return(
 			<div className="classPage">
 				<div className="page_top">
-						<a href="#" > <i className="iconfont123">&#xe639;</i></a>
+						<a href="/home" > <i className="iconfont123">&#xe639;</i></a>
 						<p>{this.state.pagess}</p>
 				</div>
 				<div className="page_box">

@@ -17,7 +17,7 @@ class Home extends Component {
 	componentDidMount() {
 		$.ajax({
 			type: "get",
-			url: "http://10.3.134.38:8081/getGoodsList",
+			url: "http://localhost:8081/getGoodsList",
 
 			data: {},
 

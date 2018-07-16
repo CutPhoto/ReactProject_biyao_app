@@ -1,3 +1,12 @@
+.shoppingcar{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.shoppingcar_main{
+	flex: 1;
+	overflow-x: hidden;
+}
 .czzgoods{
 	width: 100%;
 	background-color: #fff;
@@ -56,7 +65,7 @@
 	margin-right: 16px;
 }
 .totalgoodsprice{
-	width: 90%;
+	width: 100%;
 	position: fixed;
 	bottom: 60px;
 	padding: 0 5%;
@@ -93,6 +102,8 @@
 .goodsbox{
 	background-color: #ccc;
 	margin-bottom: 120px;
+
+
 }
 .goodsclearsure{
 	width: 100%;
@@ -113,9 +124,9 @@
 	transform: translate(-50%,-50%);
 }
 .goodsclearsure>div>h4{
-	height: 16px;
-	padding: 10px;
-	line-height: 16px;
+	height: 32px;
+	padding: 0 10px;
+	line-height: 32px;
 	text-align: left;
 	color: #797979;
 	font-size: 14px;

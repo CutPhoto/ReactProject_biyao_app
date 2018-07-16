@@ -41,8 +41,8 @@ class ShoppingCar extends Component {
 					//console.log(JSON.parse(xhr.responseText))
 				}
 			}
-			//console.log(`http://10.3.134.38:8081/removeToCart?suid=${this.state.goodslist[this.state.clearid].id}`)
-			xhr.open('get',`http://10.3.134.38:8081/removeToCart?suid=${this.state.goodslist[this.state.clearid].id}`,true)
+			//console.log(`http://localhost:8081/removeToCart?suid=${this.state.goodslist[this.state.clearid].id}`)
+			xhr.open('get',`http://localhost:8081/removeToCart?suid=${this.state.goodslist[this.state.clearid].id}`,true)
 			xhr.send();
 			this.setState({
 				goodslist:arr,
@@ -86,33 +86,24 @@ class ShoppingCar extends Component {
 		}
 	}
 	//按钮加一
-	qtycountadd(e){
-		var arr = []
-			for(let i = 0; i<this.state.goodslist.length ; i++){
-				arr.push(this.state.goodslist[i])
-				if(e.target.className == this.state.goodslist[i].id){
-					arr[i].qty++
-				}	
-		}
-		console.log(arr)
+	qtycountadd(e,index){
+		var arr = [];
+		arr = [...this.state.goodslist];
+		arr[index].qty++;
 		this.setState({
 			goodslist:arr
 		})	
 	}
 	//按钮减一
-	qtycountreduce(e){
-		var arr = []
-			for(let i = 0; i<this.state.goodslist.length ; i++){
-				arr.push(this.state.goodslist[i])
-				if(e.target.className == this.state.goodslist[i].id){
-					if(arr[i].qty <= 1){
-						arr[i].qty = 1;
-					}else{
-						arr[i].qty--
-					}
-				}	
+	qtycountreduce(e,index){
+		var arr = [];
+		arr = [...this.state.goodslist];
+		if(arr[index].qty <= 1){
+			arr[index].qty = 1;
+		} else {
+			arr[index].qty--
 		}
-		console.log(arr)
+
 		this.setState({
 			goodslist:arr
 		})	
@@ -202,7 +193,7 @@ class ShoppingCar extends Component {
 				arr.push(item)
 				res = true
 				var xhr = new XMLHttpRequest();
-				xhr.open('get',`http://10.3.134.38:8081/removeToCart?suid=${item.id}`,true)
+				xhr.open('get',`http://localhost:8081/removeToCart?suid=${item.id}`,true)
 				xhr.send();
 			}
 		})
@@ -236,7 +227,7 @@ class ShoppingCar extends Component {
 				})
 			}
 		}.bind(this)
-		xhr.open('get','http://10.3.134.38:8081/getCartList',true)
+		xhr.open('get','http://localhost:8081/getCartList',true)
 		xhr.send()
 	
 		
@@ -244,14 +235,15 @@ class ShoppingCar extends Component {
 	}
 	render() {
 		return (
-				<div>	
+				<div className="shoppingcar">	
 					<HeaderLogin callback={this.headerCallback} isShowEditor={this.state.isShowEditor} textcontent={this.state.textcontent}/>
+					<div className="shoppingcar_main">
 					<div className="goodsbox">
 						{
 							(()=>{
 								if(this.state.goodslist)
 								return this.state.goodslist.map((item,index)=>{
-									return <div key={index + item} className="czzgoods">
+									return <div key={item.id} className="czzgoods">
 												<div className="shopname">
 													<input type="checkbox" onClick={(e)=>this.changechecked(e,item)} className="inputs"/>
 														<i className="shopiconfont">&#xe736;</i>杂货店<i className="shopiconfont">&#xe735;</i>
@@ -271,9 +263,9 @@ class ShoppingCar extends Component {
 													</div>	
 													<div style={{display:'none'}} className="goodsclear">
 														<span>
-															<span className="reduceqty"   onClick = {(e)=>this.qtycountreduce(e)}>-</span>
+															<span className="reduceqty"   onClick = {(e)=>this.qtycountreduce(e,index)}>-</span>
 															<input className="totalqtyvalue" type="number" value={item.qty} onBlur={(e)=>this.disabletrim(e,item,index)} onChange={(e)=>this.changevalue(e,item,index)}/>
-															<span className="addqty" onClick = {(e)=>this.qtycountadd(e)}>+</span>
+															<span className="addqty" onClick = {(e)=>this.qtycountadd(e,index)}>+</span>
 														</span>
 														<span onClick={()=>this.cleargoods(index)} className="shopiconfont rubbish">
 															&#xe61d;
@@ -312,6 +304,7 @@ class ShoppingCar extends Component {
 							<span onClick={this.clearsure}>取消</span>
 							<span onClick={this.clearsure}>确定</span>
 						</div>
+					</div>
 					</div>
 					<PublicButtom/>
 				</div>

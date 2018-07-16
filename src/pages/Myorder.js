@@ -38,7 +38,8 @@ class Myorder extends Component{
 				<div className="Myorder">
 					<div className="Myorderheader">
 						<p>欢迎！{this.state.userPhone}</p>
-					</div>	
+					</div>
+				
 					<div>
 						<p>我的订单<i>&gt;</i></p>
 						<div className="iconText">
@@ -77,7 +78,7 @@ class Myorder extends Component{
 						<p>客服新消息<i>&gt;</i></p>
 					</div>
 					<div>关注“必要”微信服务号获取订单最新状态！</div>
-					<div style={{marginBottom:'60px'}} className="bottomdiv">
+					<div className="bottomdiv" style = {{marginBottom:'60px'}}>
 						<div>
 							<a>下载App</a>
 							<a>关于必要</a>
@@ -85,7 +86,9 @@ class Myorder extends Component{
 						<div><a>{this.state.userPhone}</a><a>|</a><a onClick = {this.exitlogin}>退出</a></div>
 						<div>Copyright © 2018, BIYAO.COM</div>
 					</div>
+					<div style={{position:'fixed',bottom:0,width:'100%'}} >
 					<PublicButtom />
+					</div>
 				</div>	
 			)
 	}

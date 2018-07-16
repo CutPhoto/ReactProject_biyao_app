@@ -60,12 +60,12 @@ class GoodsDetail extends Component {
 						
 					}
 				}.bind(this);
-				xhr1.open("get",`http://10.3.134.38:8081/getClassify?classify=${goodsArr[0].classify}`, false);
+				xhr1.open("get",`http://localhost:8081/getClassify?classify=${goodsArr[0].classify}`, false);
 				//4.向服务器发送请求
 				xhr1.send(null);
 			}
 		}.bind(this);
-		xhr.open("get",`http://10.3.134.38:8081/getDetails?suid=${suid}`, false);
+		xhr.open("get",`http://localhost:8081/getDetails?suid=${suid}`, false);
 		//4.向服务器发送请求
 		xhr.send(null);
 		
@@ -80,7 +80,7 @@ class GoodsDetail extends Component {
 				<GoodsDetailsAddress/>
 				<GoodsDetailsSizeContrast/>
 				<GoodsDetailsTab type={"评价"}/>
-				<a href="http://10.3.134.38:3000/AppraiseList">
+				<a href="http://localhost:3000/AppraiseList">
 				<GoodsDetailsAppraise/>
 				</a>
 				<GoodsDetailsShop/>

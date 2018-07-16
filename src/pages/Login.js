@@ -58,7 +58,7 @@ class Login extends Component {
 				}
 			}
 		}.bind(this)
-		xhr.open("post",'http://10.3.134.38:8081/login', true);
+		xhr.open("post",'http://localhost:8081/login', true);
 		//用post请求必须加上这一句
 		xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
 		//4.向服务器发送请求

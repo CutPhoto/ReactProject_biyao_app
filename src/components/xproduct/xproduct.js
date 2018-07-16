@@ -48,6 +48,10 @@ class Xproduct extends Component {
 			]
 		}
 	}
+	onClickgoods(e){
+		
+		window.location.href = '/goodsDetail/?suid='+e.target.parentNode.parentNode.className
+	}
 	componentDidMount(){
 			var xianshi=[]
 			var arrs=[];
@@ -75,7 +79,7 @@ class Xproduct extends Component {
 					})
 			    }
 			}
-			xhr.open("get", "http://10.3.134.38:8081/getGoodsList", true);
+			xhr.open("get", "http://localhost:8081/getGoodsList", true);
 			xhr.send(null);
 	}
 	render() {
@@ -86,7 +90,7 @@ class Xproduct extends Component {
       			{
       				(function(self){
       					return self.state.productli.map((item,index)=>{
-      						return <li key={index}>
+      						return <li key={index} onClick={self.onClickgoods.bind(self)} className={item.suid}>
 					      				<img src={item.imageUrl}/>
 					      				<div className="xproduct_m">
 					      					<p>{item.classify}</p>
