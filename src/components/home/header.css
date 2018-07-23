@@ -115,3 +115,8 @@
 .nav_sort_box .click_show_ul li a {
 	font-size: 12px;
 }
+
+.hid_drag_ul .navItem a{
+	color: purple;
+	border-bottom: 1px solid purple;
+}

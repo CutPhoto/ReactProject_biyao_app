@@ -5,12 +5,36 @@ import '../../swiper-4.3.3.min.css'
 import './header.css'
 import Swiper from 'swiper'
 
+import $ from 'jquery'
+
 export default class Xheader extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
+			textItem:[
+			{text:'推荐'},
+			{text:'经典男装'},
+			{text:'潮流女装'},
+			{text:'光学眼镜'},
+			{text:'内衣配饰'},
+			{text:'母婴童装'},
+			{text:'男女鞋靴'},
+			{text:'户外运动'},
+			{text:'箱包出行'},
+			{text:'美妆个护'},
+			{text:'生活居家'},
+			{text:'厨具水具'},
+			{text:'家用电器'},
+			{text:'家装五金'},
+			{text:'家居家具'},
+			{text:'3C数码'},
+			{text:'汽车配件'},
+			{text:'医疗保健'},
+			{text:'个性定制'}
+			],
 			navStyle: '',
-			bool: true
+			bool: true,
+			nowIndex:0
 		}
 	}
 
@@ -30,6 +54,7 @@ export default class Xheader extends React.Component {
 			bool: !this.state.bool
 		})
 	}
+	
 
 	render() {
 		return(
@@ -40,64 +65,13 @@ export default class Xheader extends React.Component {
 				<div className="header-nav">
 					<div className="swiper-container hid_drag_box">
 						<ul className="swiper-wrapper hid_drag_ul">
-							<li className='swiper-slide'>
-								<a className={this.state.navStyle}>推荐</a>
-							</li>
-							<li className='swiper-slide'>
-								<a>经典男装</a>
-							</li>
-							<li className='swiper-slide'>
-								<a >潮流女装</a>
-							</li>
-							<li className='swiper-slide'>
-								<a >光学眼镜</a>
-							</li>
-							<li className='swiper-slide'>
-								<a >内衣配饰</a>
-							</li>
-							<li className='swiper-slide'>
-								<a >母婴童装</a>
-							</li>
-						
-							<li className='swiper-slide'>
-								<a >男女鞋靴</a>
-							</li>
-							<li className='swiper-slide'>
-								<a >户外运动</a>
-							</li>
-							<li className='swiper-slide'>
-								<a >箱包出行</a>
-							</li>
-							<li className='swiper-slide'>
-								<a >美妆个护</a>
-							</li>
-							<li className='swiper-slide'>
-								<a >生活居家</a>
-							</li>
-							<li className='swiper-slide'>
-								<a >厨具水具</a>
-							</li>
-							<li className='swiper-slide'>
-								<a >家用电器</a>
-							</li>
-							<li className='swiper-slide'>
-								<a >家装五金</a>
-							</li>
-							<li className='swiper-slide'>
-								<a >家居家具</a>
-							</li>
-							<li className='swiper-slide'>
-								<a >3C数码</a>
-							</li>
-							<li className='swiper-slide'>
-								<a >汽车配件</a>
-							</li>
-							<li className='swiper-slide'>
-								<a >医疗保健</a>
-							</li>
-							<li className='swiper-slide'>
-								<a >个性定制</a>
-							</li>
+							{
+								this.state.textItem.map((item,index)=>{
+									return <li className='swiper-slide' key={index}>
+												<a>{item.text}</a>
+											</li>
+								})
+							}	
 						</ul>
 					</div>
 					<span onClick={this.navSortArrow.bind(this)} className="navArrow_icon_down iconfont icon-chevron-copy" id="slide-on"></span>
@@ -108,63 +82,13 @@ export default class Xheader extends React.Component {
 						</div>
 						<div className="click_show_sort">
 							<ul className='click_show_ul'>
-								<li className="">
-									<a>推荐</a>
-								</li>
-								<li>
-									<a className="" >经典男装</a>	
-								</li>
-								<li>
-									<a className="" >潮流女装</a>	
-								</li>
-								<li>
-									<a className="" >光学眼镜</a>	
-								</li>
-								<li>
-									<a className="" >内衣配饰</a>
-								</li>
-								<li>
-									<a className="" >母婴童装</a>
-								</li>
-								<li>
-									<a className="" >男女鞋靴</a>
-								</li>
-								<li>
-									<a className="" >户外运动</a>	
-								</li>
-								<li>
-									<a className="" >箱包出行</a>
-								</li>
-								<li>
-									<a className="" >美妆个护</a>
-								</li>
-								<li>
-									<a className="" >生活居家</a>	
-								</li>
-								<li>
-									<a className="" >厨具水具</a>
-								</li>
-								<li>
-									<a className="" >家用电器</a>
-								</li>
-								<li>
-									<a className="" >家装五金</a>
-								</li>
-								<li>
-									<a className="" >家居家具</a>
-								</li>
-								<li>
-									<a className="" >3C数码</a>
-								</li>
-								<li>
-									<a className="" >汽车配件</a>
-								</li>
-								<li>
-									<a className="" >医疗保健</a>
-								</li>
-								<li>
-									<a className="" >个性定制</a>
-								</li>
+								{
+									this.state.textItem.map((item,index)=>{
+										return <li key={index}>
+													<a>{item.text}</a>
+												</li>
+									})
+								}
 							</ul>
 						</div>
 					</div>
