@@ -4,22 +4,32 @@ import React, {
 
 import "./topicDetail.css"
 
+import axios from 'axios';
+
 import $ from 'jquery'
 
 export default class XtopicDetail extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			topicData: [],
+			goodsData: [],
 			suidData: []
 		}
 	}
 
 	componentDidMount() {
-		let goodslist = JSON.parse(localStorage.getItem('goodsData'))
+		
+		axios.get('http://localhost:8081/getGoodsList').then(res => {
+	      	
+	      	const goodsData=res.data
+	      	
+	        this.setState({ goodsData });
+	
+	    });
+		
+		
 		let suid = JSON.parse(localStorage.getItem('goodsSuid'))
 		this.setState({
-			topicData: goodslist,
 			suidData: suid
 		})
 	}
@@ -31,7 +41,7 @@ export default class XtopicDetail extends Component {
 					<div className="topicDetail_header">
 						<a href="/home" className="iconfont icon-shouye" style={{fontSize:'25px'}}></a>
 						<span>{this.state.suidData.title}</span>
-						<i>{console.log(this.state.topicData)}</i>
+						<i></i>
 					</div>
 					<div className="topicDetail_banner">
 						<img src={this.state.suidData.imageUrl}/>
@@ -42,7 +52,7 @@ export default class XtopicDetail extends Component {
 						<h4 className="topicDetail_jingxuan_title">为您精选</h4>
 						<ul className="topicDetail_jingxuan_content">
 							{
-								this.state.topicData.map((item,index)=>{
+								this.state.goodsData.map((item,index)=>{
 									if(item.classify===this.state.suidData.classify){
 										return  <li className="topicDetail_jingxuan_content_item" key={index}>
 													<img src={item.imageUrl}/>

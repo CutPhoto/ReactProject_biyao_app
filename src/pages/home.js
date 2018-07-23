@@ -16,23 +16,6 @@ class Home extends Component {
 			isShowList:true
 		}
 	}
-	
-	
-	componentDidMount() {
-		$.ajax({
-			type: "get",
-			url: "http://localhost:8081/getGoodsList",
-
-			data: {},
-
-			async: true,
-
-			success(data) {
-				localStorage.setItem('goodsData', data)
-			}
-		});
-	}
-
 
 
 	render() {

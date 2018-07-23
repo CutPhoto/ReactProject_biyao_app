@@ -4,6 +4,8 @@ import React, {
 
 import "./tuijian.css"
 
+import axios from 'axios';
+
 import $ from 'jquery';
 
 export default class Xtuijian extends Component {
@@ -14,17 +16,23 @@ export default class Xtuijian extends Component {
 		}
 	}
 	componentDidMount() {
-		var goodsData = JSON.parse(localStorage.getItem('goodsData'))
-		this.setState({
-			goodsData: goodsData
-		})
+		
+		axios.get('http://localhost:8081/getGoodsList').then(res => {
+	      	
+	      	const goodsData=res.data
+	      	
+	        this.setState({ goodsData });
+	
+	    });
+		
+		
 
 
 		$('.weinituijian_content').on("click", (e) => {
 			let target = e.target
 			if(target.tagName.toLowerCase() === "img") {
 				var goodsSuid = target.parentNode.getAttribute('data-guid');
-				var currentGoods = goodsData.filter(function(item) {
+				var currentGoods = this.state.goodsData.filter(function(item) {
 					return item.suid === goodsSuid;
 				})[0];
 				localStorage.setItem('goodsSuid', JSON.stringify(currentGoods))

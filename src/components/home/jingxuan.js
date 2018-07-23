@@ -4,27 +4,37 @@ import React, {
 
 import "./jingxuan.css";
 
+
+import axios from 'axios';
+
 import $ from 'jquery'
 
 export default class Xjingxuan extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			goodsData: []
+			goodsData: [],
+			posts:[]
 		}
 	}
 
 	componentDidMount() {
-		var goodsData = JSON.parse(localStorage.getItem('goodsData')).slice(56,59)
-		this.setState({
-			goodsData: goodsData
-		})
+		
+		axios.get('http://localhost:8081/getGoodsList').then(res => {
+	      	
+	      	const goodsData=res.data.slice(56,59)
+	      	
+	        this.setState({ goodsData });
+	
+	    });
+	    
+	    
 		
 		$('.jingxuan_box').on("click",(e)=>{
 			let target=e.target
 			if(target.tagName.toLowerCase()==="img"){
 				var goodsSuid=target.parentNode.parentNode.getAttribute('data-guid');
-				var currentGoods = goodsData.filter(function(item){
+				var currentGoods = this.state.goodsData.filter(function(item){
 	                return item.suid === goodsSuid;
 	            })[0];
 				console.log(currentGoods);
@@ -41,6 +51,7 @@ export default class Xjingxuan extends Component {
 				<ul>
 					{
 			    		this.state.goodsData.map((item,index) => {
+			    			console.log(item)
 		    				return <li className="jingxuang_item" data-guid={item.suid} key={index}>
 			    						<a href="/classify/topicDetail">
 											<img src={item.imageUrl}/>
