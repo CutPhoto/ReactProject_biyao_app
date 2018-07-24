@@ -32,7 +32,7 @@ class ClassPage extends Component {
 					})
 			    }
 			}
-			xhr.open("get", "http://localhost:8081/getGoodsList", true);
+			xhr.open("get", "http://qxu1142150189.my3w.com/api/getList.php", true);
 			xhr.send(null);
 
 		

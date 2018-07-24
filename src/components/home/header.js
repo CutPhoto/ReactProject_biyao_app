@@ -5,9 +5,11 @@ import '../../swiper-4.3.3.min.css'
 import './header.css'
 import Swiper from 'swiper'
 
+import {connect} from 'react-redux';
+
 import $ from 'jquery'
 
-export default class Xheader extends React.Component {
+class Xheader extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -98,3 +100,5 @@ export default class Xheader extends React.Component {
 		)
 	}
 }
+
+export default Xheader;

@@ -13,8 +13,12 @@ class Home extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			isShowList:true
+			isShowList:'block'
 		}
+	}
+	
+	isShowclassPages(){
+		this.state.isShowList = 'none'
 	}
 
 

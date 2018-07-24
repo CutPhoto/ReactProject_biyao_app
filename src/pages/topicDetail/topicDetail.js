@@ -19,7 +19,7 @@ export default class XtopicDetail extends Component {
 
 	componentDidMount() {
 		
-		axios.get('http://localhost:8081/getGoodsList').then(res => {
+		axios.get('http://qxu1142150189.my3w.com/api/getList.php').then(res => {
 	      	
 	      	const goodsData=res.data
 	      	
@@ -37,12 +37,12 @@ export default class XtopicDetail extends Component {
 	render() {
 		return(
 			<div className="topicDetail_box">
-				<div>
-					<div className="topicDetail_header">
-						<a href="/home" className="iconfont icon-shouye" style={{fontSize:'25px'}}></a>
-						<span>{this.state.suidData.title}</span>
-						<i></i>
-					</div>
+				<div className="topicDetail_header">
+					<a href="/home" className="iconfont icon-shouye" style={{fontSize:'25px'}}></a>
+					<span>{this.state.suidData.title}</span>
+					<i></i>
+				</div>
+				<div className="topicDetail_xpanel">
 					<div className="topicDetail_banner">
 						<img src={this.state.suidData.imageUrl}/>
 						<p className="topicDetail_title_p1">{this.state.suidData.title}</p>

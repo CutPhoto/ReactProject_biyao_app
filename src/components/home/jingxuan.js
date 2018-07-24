@@ -20,7 +20,7 @@ export default class Xjingxuan extends Component {
 
 	componentDidMount() {
 		
-		axios.get('http://localhost:8081/getGoodsList').then(res => {
+		axios.get('http://qxu1142150189.my3w.com/api/getList.php').then(res => {
 	      	
 	      	const goodsData=res.data.slice(56,59)
 	      	

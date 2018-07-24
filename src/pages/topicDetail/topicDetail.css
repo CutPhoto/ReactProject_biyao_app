@@ -1,8 +1,21 @@
+html,body{
+	height:100%;
+}
 .topicDetail_box{
 	width: 100%;
+	height: 100%;
 	background-color: #fff;
 	font-size: 14px;
+	display: flex;
+	flex-direction: column;
 }
+
+.topicDetail_xpanel{
+	flex: 1;
+	overflow-x: hidden;
+	background-color: #E8E8E8;
+}
+
 .topicDetail_header{
 	display: flex;
 	justify-content: space-between;
@@ -30,7 +43,6 @@
 .topicDetail_jingxuan_box{
 	width: 100%;
 	height: 100%;
-	background-color: #E8E8E8;
 }
 .topicDetail_jingxuan_title{
 	text-align: center;

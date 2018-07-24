@@ -51,7 +51,6 @@ import AppraiseList from './pages/appraiseList/appraiseList.js';
 import Searchresult from './pages/searchresult/searchresult.js';
 
 const store = createStore((state = {
-	
 	id:279
 }, action) => {
 	const count = state.count
