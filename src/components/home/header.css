@@ -1,7 +1,4 @@
 .biyao_header {
-	/*position: fixed;
-	top: 0;
-	left: 0;*/
 	width: 100%;
 	z-index: 10;
 	background-color: #fff;
@@ -103,7 +100,7 @@
 }
 
 .nav_sort_box .click_show_ul li {
-	width: 70px;
+	width: 20%;
 	height: 25px;
 	border: 1px solid #ccc;
 	border-radius: 20px;
